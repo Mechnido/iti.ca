@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="is-loading">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<link rel="alternate" href="../../../../en/blog/infrastructure-cloud/rethinking-it-with-daas/index.html" hreflang="en" />
+<link rel="alternate" href="index.html" hreflang="fr" />
+
+	<title>Repenser les TI grâce au DaaS | ITI</title>
+	<meta name="description" content="Le Device as a Service simplifie la gestion TI en les traitant comme un service plutôt que comme un fardeau qui monopolise du capital." />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="fr_CA" />
+	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Repenser les TI grâce au DaaS | ITI" />
+	<meta property="og:description" content="Le Device as a Service simplifie la gestion TI en les traitant comme un service plutôt que comme un fardeau qui monopolise du capital." />
+	<meta property="og:url" content="https://iti.ca/fr/blogue/infrastructure-infonuagique/repenser-ti-grace-daas/" />
+	<meta property="og:site_name" content="ITI" />
+	<meta property="article:publisher" content="https://facebook.com/intelligenceITI" />
+	<meta property="article:published_time" content="2020-10-06T10:00:18+00:00" />
+	<meta property="article:modified_time" content="2022-03-09T16:09:41+00:00" />
+	<meta property="og:image" content="https://iti.ca/uploads/2020/09/repenser-informatique-daas.jpg" />
+	<meta property="og:image:width" content="1290" />
+	<meta property="og:image:height" content="788" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Écrit par" />
+	<meta name="twitter:data1" content="Andree-Anne Mauffette" />
+	<meta name="twitter:label2" content="Estimation du temps de lecture" />
+	<meta name="twitter:data2" content="4 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://iti.ca/#organization","name":"ITI","url":"https://iti.ca/","sameAs":["https://facebook.com/intelligenceITI","https://www.linkedin.com/company/intelligenceiti","https://www.youtube.com/channel/UC4eVFxF_vWoitpJ2H-27sAA"],"logo":{"@type":"ImageObject","@id":"https://iti.ca/#logo","inLanguage":"fr-CA","url":"https://iti.ca/uploads/2020/06/ITI_Seul_RVB_Noir.png","contentUrl":"https://iti.ca/uploads/2020/06/ITI_Seul_RVB_Noir.png","width":835,"height":667,"caption":"ITI"},"image":{"@id":"https://iti.ca/#logo"}},{"@type":"WebSite","@id":"https://iti.ca/#website","url":"https://iti.ca/","name":"ITI","description":"Intelligence TI. Intelligence humaine.","publisher":{"@id":"https://iti.ca/#organization"},"inLanguage":"fr-CA"},{"@type":"ImageObject","@id":"https://iti.ca/fr/blogue/infrastructure-infonuagique/repenser-ti-grace-daas/#primaryimage","inLanguage":"fr-CA","url":"https://iti.ca/uploads/2020/09/repenser-informatique-daas.jpg","contentUrl":"https://iti.ca/uploads/2020/09/repenser-informatique-daas.jpg","width":1290,"height":788,"caption":"Repenser les TI gr\u00e2ce au DaaS"},{"@type":"WebPage","@id":"https://iti.ca/fr/blogue/infrastructure-infonuagique/repenser-ti-grace-daas/#webpage","url":"https://iti.ca/fr/blogue/infrastructure-infonuagique/repenser-ti-grace-daas/","name":"Repenser les TI gr\u00e2ce au DaaS | ITI","isPartOf":{"@id":"https://iti.ca/#website"},"primaryImageOfPage":{"@id":"https://iti.ca/fr/blogue/infrastructure-infonuagique/repenser-ti-grace-daas/#primaryimage"},"datePublished":"2020-10-06T10:00:18+00:00","dateModified":"2022-03-09T16:09:41+00:00","description":"Le Device as a Service simplifie la gestion TI en les traitant comme un service plut\u00f4t que comme un fardeau qui monopolise du capital.","breadcrumb":{"@id":"https://iti.ca/fr/blogue/infrastructure-infonuagique/repenser-ti-grace-daas/#breadcrumb"},"inLanguage":"fr-CA","potentialAction":[{"@type":"ReadAction","target":["https://iti.ca/fr/blogue/infrastructure-infonuagique/repenser-ti-grace-daas/"]}]},{"@type":"BreadcrumbList","@id":"https://iti.ca/fr/blogue/infrastructure-infonuagique/repenser-ti-grace-daas/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://iti.ca/fr/"},{"@type":"ListItem","position":2,"name":"Blogue","item":"https://iti.ca/fr/blogue/"},{"@type":"ListItem","position":3,"name":"Repenser les TI gr\u00e2ce au DaaS"}]}]}</script>
+
+
+<meta name="theme-color" content="#E1EFF6">
+<meta name="msapplication-config" content="https://iti.ca/themes/iti/browserconfig.xml">
+<link rel="icon" href="../../../../themes/iti/assets/images/favicon/favicon.svg">
+<link rel="mask-icon" href="../../../../themes/iti/assets/images/favicon/mask-icon.svg" color="#1D1D1B">
+<link rel="apple-touch-icon" href="../../../../themes/iti/assets/images/favicon/apple-touch-icon.png">
+<link rel="manifest" href="../../../../themes/iti/site.webmanifest.html">
+<style id="iti-theme-critical-inline-css">
+.c-intro{visibility:hidden;position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden;z-index:9;justify-content:center;align-items:center;display:flex}.has-intro .c-intro{visibility:visible}.is-animated .c-intro{visibility:hidden;transition:visibility 0s .9s}.c-intro svg{position:absolute;top:0;left:50%;width:auto!important;transform:translateX(-50%)!important}.c-intro_text{position:relative;font-size:2rem;z-index:999;text-align:center;font-weight:400;transition:opacity 1.2s cubic-bezier(.075,.82,.165,1)}.has-intro .c-intro_text{opacity:0;transition-delay:3s}.c-intro_text span{font-weight:500}.c-intro_line{opacity:0;transform:translateY(100%);transition:transform 1.2s cubic-bezier(.075,.82,.165,1),opacity 1.2s cubic-bezier(.075,.82,.165,1)}.has-intro .c-intro_line{opacity:1;transform:translateY(0)}.c-intro_line:first-child{transition-delay:.8s}.c-intro_line:last-child{transition-delay:.9s}.c-loader{position:fixed;top:0;right:0;bottom:0;left:0;background-color:#f6f9fb;z-index:10;transition:transform 2.4s cubic-bezier(.075,.82,.165,1),visibility 0s 2.4s;transform:translateZ(0);display:flex;align-items:center;justify-content:center}.has-intro .c-loader{display:none}.is-animated.is-ready .c-loader,.is-transitioned .c-loader,.is-transitioning .c-loader{transform:translateY(-100%);visibility:hidden}.c-loader_logo{position:relative;height:9.33333rem;font-size:0;transition:transform 2.4s cubic-bezier(.075,.82,.165,1)}@media (max-width:699px){.is-animated.is-ready .c-loader_logo,.is-transitioned .c-loader_logo,.is-transitioning .c-loader_logo{transform:translateY(100%)}}@media (min-width:700px){.is-animated.is-ready .c-loader_logo,.is-transitioned .c-loader_logo,.is-transitioning .c-loader_logo{transform:translateY(200%)}}.c-loader_logo_line{display:inline-block;height:100%;width:2.46667rem;background-color:#221e1e;margin:0 1.86667rem;border-radius:.46667rem;transition:transform 1.8s cubic-bezier(.075,.82,.165,1)}.c-loader_logo_line:first-child{transform:translateY(-100vh)}.c-loader_logo_line:nth-child(2){position:absolute;top:0;left:50%;height:2.33333rem;width:5rem;margin-left:-2.46667rem;transform:translateX(-100vw)}.c-loader_logo_line:nth-child(3){height:4.66667rem;transform:translateX(100vw)}.c-loader_logo_line:nth-child(4){transform:translateY(100vh)}.is-loaded .c-loader_logo_line:first-child,.is-loaded .c-loader_logo_line:nth-child(4){transform:translateY(0)}.is-loaded .c-loader_logo_line:nth-child(2),.is-loaded .c-loader_logo_line:nth-child(3){transform:translateX(0)}html.is-loading{cursor:wait}.page{opacity:0;transition:opacity .6s cubic-bezier(.075,.82,.165,1)}.is-animated .page{opacity:1}
+</style>
+<link rel="stylesheet" id="iti-theme-app-css" href="../../../../themes/iti/assets/styles/app.css%3Fver=202206271314.css" media="print" onload="this.media='all'; this.onload=null; this.isLoaded=true">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M7QCMZL');</script>
+<!-- End Google Tag Manager -->
+<!-- dataLayer Initialization -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    </script>
+<!-- End dataLayer Initialization -->
+    </head>
+    <body class="" data-module-load data-module-gtm>
+
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7QCMZL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+        <div class="c-intro" data-module-intro>
+    <div class="c-intro_text" aria-label="Après 30 ans, Informatique ProContact devient ITI Informatique.">
+        <div class="c-intro_line" aria-hidden="true">Après 30 ans, </div>
+        <div class="c-intro_line" aria-hidden="true"><span>ProContact</span> devient <span class="u-screen-reader-text">ITI Informatique</span></div>
+    </div>
+</div>
+
+        <div class="c-loader">
+            <div class="c-loader_logo">
+                <div class="c-loader_logo_line"></div>
+                <div class="c-loader_logo_line"></div>
+                <div class="c-loader_logo_line"></div>
+                <div class="c-loader_logo_line"></div>
+            </div>
+        </div>
+
+        <div class="c-transition" data-module-transition></div>
+
+        <div class="page" data-load-container>
+            <!-- dataLayer Event -->
+<script type="application/json" data-load="gtm-event">{"PageType":"Blog"}</script>
+<!-- End dataLayer Event -->
+
+            <a class="u-screen-reader-text -focusable" href="index.html#main" data-scroll-to>Aller au contenu</a>
+
+            <header class="c-header" data-module-header>
+    <a class="c-header_logo" href="../../../../fr.html" rel="home" aria-label="ITI">
+        <svg aria-hidden="true" focusable="false">
+            <title>ITI</title>
+            <use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#logo-fr"></use>
+        </svg>
+    </a>
+    <nav class="c-header_nav">
+                            <ul class="c-header_nav_list">
+                                    <li class="c-header_nav_item">
+                                                    <a class="c-header_nav_link" href="../../../solutions-ti/index.html">Solutions TI</a>
+                                            </li>
+                                    <li class="c-header_nav_item">
+                                                    <a class="c-header_nav_link" href="../../../solutions-humaines/index.html">Solutions humaines</a>
+                                            </li>
+                                    <li class="c-header_nav_item -subnav">
+                                                    <span class="c-header_nav_link">Industries</span>
+                            <div class="c-header_nav_subnav">
+                                <div class="c-header-nav_subnav_bg"></div>
+                                <ul class="c-header_nav_subnav_list">
+                                                                            <li class="c-header_nav_subnav_item">
+                                            <a class="c-header_nav_subnav_link" href="../../../industries/moyennes-entreprises/index.html">Moyennes entreprises</a>
+                                        </li>
+                                                                            <li class="c-header_nav_subnav_item">
+                                            <a class="c-header_nav_subnav_link" href="../../../industries/corporatif/index.html">Grandes entreprises</a>
+                                        </li>
+                                                                            <li class="c-header_nav_subnav_item">
+                                            <a class="c-header_nav_subnav_link" href="../../../industries/education/index.html">Éducation</a>
+                                        </li>
+                                                                            <li class="c-header_nav_subnav_item">
+                                            <a class="c-header_nav_subnav_link" href="../../../industries/gouvernement/index.html">Gouvernement</a>
+                                        </li>
+                                                                            <li class="c-header_nav_subnav_item">
+                                            <a class="c-header_nav_subnav_link" href="../../../industries/sante/index.html">Santé</a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                                            </li>
+                                    <li class="c-header_nav_item">
+                                                    <a class="c-header_nav_link" href="../../../a-propos/index.html">À propos</a>
+                                            </li>
+                                    <li class="c-header_nav_item">
+                                                    <a class="c-header_nav_link is-active" href="../../index.html">Blogue</a>
+                                            </li>
+                                    <li class="c-header_nav_item -subnav">
+                                                    <span class="c-header_nav_link">Emploi</span>
+                            <div class="c-header_nav_subnav">
+                                <div class="c-header-nav_subnav_bg"></div>
+                                <ul class="c-header_nav_subnav_list">
+                                                                            <li class="c-header_nav_subnav_item">
+                                            <a class="c-header_nav_subnav_link" href="../../../travailler-chez-iti/index.html">Travailler chez ITI</a>
+                                        </li>
+                                                                            <li class="c-header_nav_subnav_item">
+                                            <a class="c-header_nav_subnav_link" href="../../../placement-de-ressources/index.html">Placement de ressources</a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                                            </li>
+                            </ul>
+                                                                <div class="c-header_nav_item -lang">
+                    <a data-load="false" class="c-header_nav_link" href="../../../../en/blog/infrastructure-cloud/rethinking-it-with-daas/index.html">En</a>
+                </div>
+                            <button class="c-header_nav_burger" data-header="button" aria-label="Menu" type="button">
+            <span class="c-header_nav_burger_icon">
+                <span class="c-header_nav_burger_icon_line"></span>
+                <span class="c-header_nav_burger_icon_line"></span>
+                <span class="c-header_nav_burger_icon_line"></span>
+            </span>
+            <svg class="c-header_nav_burger_close" aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#close"></use></svg>
+        </button>
+        <div class="c-header_nav_button">
+            <button class="c-button -blue -block -medium" type="button" data-header="getInTouch" data-gtm="target" data-gtm-data='{"eventCategory":"Contact","eventAction":"Parlons nous","eventLabel":"https://iti.ca/fr/blogue/infrastructure-infonuagique/repenser-ti-grace-daas/"}'>
+                <span class="c-button_label">Parlons-nous</span>
+                <span class="c-button_icon -scale">
+                    <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#talk"></use></svg>
+                </span>
+            </button>
+        </div>
+    </nav>
+</header>
+            <nav class="c-nav" data-module-nav>
+    <div class="c-nav_bg" data-nav="close"></div>
+    <div class="c-nav_main">
+        <div class="c-nav_container o-container">
+            <div class="o-layout -gutterTiny">
+                <div class="o-layout_item u-4/10@from-small">
+                                                                <ul class="c-nav_top">
+                                                            <li class="c-nav_item">
+                                                                            <a class="c-nav_link c-heading -h5" href="../../../solutions-ti/index.html">Solutions TI</a>
+                                                                    </li>
+                                                            <li class="c-nav_item">
+                                                                            <a class="c-nav_link c-heading -h5" href="../../../solutions-humaines/index.html">Solutions humaines</a>
+                                                                    </li>
+                                                            <li class="c-nav_item">
+                                                                            <a class="c-nav_link c-heading -h5" href="../../../a-propos/index.html">À propos</a>
+                                                                    </li>
+                                                            <li class="c-nav_item">
+                                                                            <a class="c-nav_link c-heading -h5 is-active" href="../../index.html">Blogue</a>
+                                                                    </li>
+                                                            <li class="c-nav_item -subnav">
+                                                                            <span class="c-nav_link c-heading -h5">Industries</span>
+                                        <ul class="c-nav_subnav">
+                                                                                            <li class="c-nav_subnav_item">
+                                                    <a class="c-nav_link -small" href="../../../industries/moyennes-entreprises/index.html">Moyennes entreprises</a>
+                                                </li>
+                                                                                            <li class="c-nav_subnav_item">
+                                                    <a class="c-nav_link -small" href="../../../industries/corporatif/index.html">Grandes entreprises</a>
+                                                </li>
+                                                                                            <li class="c-nav_subnav_item">
+                                                    <a class="c-nav_link -small" href="../../../industries/sante/index.html">Santé</a>
+                                                </li>
+                                                                                            <li class="c-nav_subnav_item">
+                                                    <a class="c-nav_link -small" href="../../../industries/gouvernement/index.html">Gouvernement</a>
+                                                </li>
+                                                                                            <li class="c-nav_subnav_item">
+                                                    <a class="c-nav_link -small" href="../../../industries/education/index.html">Éducation</a>
+                                                </li>
+                                                                                    </ul>
+                                                                    </li>
+                                                    </ul>
+                                                        </div>
+                <div class="o-layout_item u-4/10@from-small">
+                                                                <ul>
+                                                            <li>
+                                    <a class="c-nav_link -large c-heading -h5" href="../../../travailler-chez-iti/index.html">
+                                        Travailler chez ITI                                                                            </a>
+                                </li>
+                                                            <li>
+                                    <a class="c-nav_link -large c-heading -h5" href="../../../placement-de-ressources/index.html">
+                                        Placement de ressources                                                                            </a>
+                                </li>
+                                                            <li>
+                                    <a class="c-nav_link -large c-heading -h5" href="https://www.ecsrv.com/PrivateClientLogin.aspx?No=620276" rel="noopener" target="_blank">
+                                        Catalogue en ligne                                                                                    <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#external"></use></svg>
+                                                                            </a>
+                                </li>
+                                                            <li>
+                                    <a class="c-nav_link -large c-heading -h5" href="https://www1.procontact.ca/ServiceCall/Login.aspx" rel="noopener" target="_blank">
+                                        Accès à mon compte                                                                                    <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#external"></use></svg>
+                                                                            </a>
+                                </li>
+                                                            <li>
+                                    <a class="c-nav_link -large c-heading -h5" href="../../../contact/index.html">
+                                        Contact                                                                            </a>
+                                </li>
+                                                    </ul>
+                                                        </div>
+                                <div class="o-layout_item u-4/10@from-small">
+                    <div class="c-nav_info">
+                        <p>
+                            Sans frais                            <br>
+                            <a href="tel:+18882511622">1-888-251-1622</a>
+                        </p>
+                    </div>
+                                            <div class="c-nav_info">
+                            <p>
+                                ITI Québec                                <br>
+                                <a href="tel:+14188711622">1-418-871-1622</a>
+                            </p>
+                        </div>
+                                            <div class="c-nav_info">
+                            <p>
+                                ITI Montréal                                <br>
+                                <a href="tel:+15149401662">1-514-940-1662</a>
+                            </p>
+                        </div>
+                                            <div class="c-nav_info">
+                            <p>
+                                ITI Toronto, Kingston et Ottawa                                <br>
+                                <a href="tel:+18665496558">1-866-549-6558</a>
+                            </p>
+                        </div>
+                                    </div>
+                                <div class="o-layout_item u-4/10@from-small u-none@to-small"></div>
+                <div class="o-layout_item u-4/10@from-small">
+                    <div class="c-social || c-nav_social">
+                                                    <a class="c-social_link -blue || c-nav_social_link" href="https://www.linkedin.com/company/intelligenceiti" rel="nooopener" target="_blank" aria-label="LinkedIn">
+                                <svg aria-hidden="true" focusable="false">
+                                    <use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-linkedin"></use>
+                                </svg>
+                            </a>
+                                                    <a class="c-social_link -blue || c-nav_social_link" href="https://facebook.com/intelligenceITI" rel="nooopener" target="_blank" aria-label="Facebook">
+                                <svg aria-hidden="true" focusable="false">
+                                    <use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-facebook"></use>
+                                </svg>
+                            </a>
+                                                    <a class="c-social_link -blue || c-nav_social_link" href="https://www.youtube.com/channel/UC4eVFxF_vWoitpJ2H-27sAA" rel="nooopener" target="_blank" aria-label="YouTube">
+                                <svg aria-hidden="true" focusable="false">
+                                    <use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-youtube"></use>
+                                </svg>
+                            </a>
+                                            </div>
+                </div>
+                <div class="o-layout_item u-4/10@from-small">
+                                                                                            <a class="c-nav_link -small" href="../../../legal/index.html">Conditions d&rsquo;utilisation</a>
+                                                                                </div>
+            </div>
+        </div>
+        <div class="c-nav_icon">
+            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#shape-diagonal"></use></svg>
+        </div>
+        <div class="c-nav_contact" data-nav="getInTouch">
+            <div class="c-nav_contact_wrap" >
+                <button class="c-nav_contact_button c-button -blue -full" type="button">
+                    <span></span>
+                    <span class="c-nav_contact_icon">
+                        <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#talk"></use></svg>
+                    </span>
+                    <span class="c-nav_contact_label">
+                        <span>Parlons-nous</span>
+                        <span class="c-button_icon">
+                            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+            <aside class="c-getInTouch" data-module-get-in-touch>
+    <div class="c-getInTouch_bg" data-get-in-touch="close"></div>
+    <div class="c-getInTouch_container">
+        <header class="c-getInTouch_header">
+            <button class="c-button -blue -large -icon -rounded -circleIcon -close" data-get-in-touch="close" aria-label="Fermer">
+                <span class="c-button_icon">
+                    <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#close"></use></svg>
+                </span>
+            </button>
+        </header>
+        <div class="c-getInTouch_main">
+            <p class="c-getInTouch_subtitle">Parlons-nous <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#talk"></use></svg></p>
+            <h3 class="c-heading c-getInTouch_title">Comprendre, conseiller, concrétiser. Voilà la force de nos experts TI, prêts à créer votre solution sur mesure!</h3>
+            <a class="c-button -blue" href="../../../contact/index.html#form">
+                <span class="c-button_label">Échangeons</span>
+                <span class="c-button_icon">
+                    <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+                </span>
+            </a>
+        </div>
+                <footer class="c-getInTouch_footer">
+            <p class="c-getInTouch_footer_text">
+                Sans frais                <br>
+                <a href="tel:+18882511622">1-888-251-1622</a>
+            </p>
+                            <p class="c-getInTouch_footer_text">
+                    ITI Québec                    <br>
+                    <a href="tel:+14188711622">1-418-871-1622</a>
+                </p>
+                            <p class="c-getInTouch_footer_text">
+                    ITI Montréal                    <br>
+                    <a href="tel:+15149401662">1-514-940-1662</a>
+                </p>
+                            <p class="c-getInTouch_footer_text">
+                    ITI Toronto, Kingston et Ottawa                    <br>
+                    <a href="tel:+18665496558">1-866-549-6558</a>
+                </p>
+                    </footer>
+            </div>
+</aside>
+
+            
+            <div data-module-scroll="main" data-module-tooltip>
+                
+                <main>
+
+    
+        
+            
+            <div class="c-section -heading -marginBottomSmall" data-scroll-section>
+                <div class="c-section_back">
+                    <a class="c-button -green -backButton" href="../../index.html">
+                        <span class="c-button_icon">
+                            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-left"></use></svg>
+                        </span>
+                        <span class="c-button_label">Tous les articles</span>
+                    </a>
+                </div>
+
+                <div class="c-section_social">
+                    <aside class="c-social" data-module-share>
+        <button type="button" class="c-social_link -black" data-share="item" data-share-url="https://iti.ca/fr/blogue/infrastructure-infonuagique/repenser-ti-grace-daas/" data-share-platform="linkedin" data-share-label="LinkedIn" data-gtm="target" data-gtm-data="{&quot;eventCategory&quot;:&quot;Medias sociaux&quot;,&quot;eventAction&quot;:&quot;Clic&quot;,&quot;eventLabel&quot;:&quot;LinkedIn&quot;}">
+        <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-linkedin"></use></svg>
+    </button>
+    <button type="button" class="c-social_link -black" data-share="item" data-share-url="https://iti.ca/fr/blogue/infrastructure-infonuagique/repenser-ti-grace-daas/" data-share-platform="twitter" data-share-label="Twitter" data-gtm="target" data-gtm-data="{&quot;eventCategory&quot;:&quot;Medias sociaux&quot;,&quot;eventAction&quot;:&quot;Clic&quot;,&quot;eventLabel&quot;:&quot;Twitter&quot;}">
+        <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-twitter"></use></svg>
+    </button>
+    <button type="button" class="c-social_link -black" data-share="item" data-share-url="https://iti.ca/fr/blogue/infrastructure-infonuagique/repenser-ti-grace-daas/" data-share-platform="facebook" data-share-label="Facebook" data-gtm="target" data-gtm-data="{&quot;eventCategory&quot;:&quot;Medias sociaux&quot;,&quot;eventAction&quot;:&quot;Clic&quot;,&quot;eventLabel&quot;:&quot;Facebook&quot;}">
+        <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-facebook"></use></svg>
+    </button>
+</aside>
+                </div>
+
+                <div class="o-container">
+                    <header class="c-section_header -margin">
+                        <div class="o-layout -gutter -flex -bottom -column@to-medium">
+                            <div class="o-layout_item u-3/10@from-medium">
+                                <div class="c-section_wrap -paddingLeft@to-medium -marginBottomSmall@to-medium">
+                                    <p class="u-anim -delay1">Date de parution<br><time datetime="2020-10-06T06:00:18-04:00">2020-10-06</time></p>
+                                </div>
+                            </div>
+                            <div class="o-layout_item u-7/10@from-small">
+                                <div class="c-articleHeader">
+                                    <h1 class="c-articleHeader_title | c-heading -h2 -noMargin u-anim -delay2">Repenser les TI grâce au DaaS</h1>
+
+                                    
+                                                                    </div>
+                            </div>
+                        </div>
+                    </header>
+
+                    <section class="o-layout -gutter -flex -columnReverse@to-medium">
+                        <div class="o-layout_item u-3/10@from-medium">
+                            <div class="c-section_wrap -paddingLeft@to-medium -marginBottomSmall@to-medium c-articleInfo">
+                                                                    <div class="c-articleInfo_author">
+                                                                                    <figure class="c-articleInfo_author_img c-figure o-ratio u-1:1 u-anim -delay3">
+                                                <div class="o-ratio_content">
+                                                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-load-src="https://iti.ca/uploads/2020/07/equipe-iti-3.jpg" alt="L&#039;équipe ITI">
+                                                </div>
+                                            </figure>
+                                                                                                                        <h3 class="c-articleInfo_author_name u-anim -delay4">Équipe ITI</h3>
+                                                                                                                                                            </div>
+                                                                <div class="c-articleInfo_category u-anim -delay6">
+                                    <p><a href="../../corporatif/index.html" class="c-articleInfo_category_link" rel="tag" data-gtm="target" data-gtm-data='{"eventCategory":"Nav_Journal","eventAction":"Categories journal","eventLabel":"Corporatif"}'>Corporatif</a>, <a href="../../education/index.html" class="c-articleInfo_category_link" rel="tag" data-gtm="target" data-gtm-data='{"eventCategory":"Nav_Journal","eventAction":"Categories journal","eventLabel":"Éducation"}'>Éducation</a>, <a href="../index.html" class="c-articleInfo_category_link" rel="tag" data-gtm="target" data-gtm-data='{"eventCategory":"Nav_Journal","eventAction":"Categories journal","eventLabel":"Infrastructure et infonuagique"}'>Infrastructure et infonuagique</a>, <a href="../../innovation-transformation-numerique/index.html" class="c-articleInfo_category_link" rel="tag" data-gtm="target" data-gtm-data='{"eventCategory":"Nav_Journal","eventAction":"Categories journal","eventLabel":"Innovation et transformation numérique"}'>Innovation et transformation numérique</a>, <a href="../../pme/index.html" class="c-articleInfo_category_link" rel="tag" data-gtm="target" data-gtm-data='{"eventCategory":"Nav_Journal","eventAction":"Categories journal","eventLabel":"PME"}'>PME</a>, <a href="../../sante/index.html" class="c-articleInfo_category_link" rel="tag" data-gtm="target" data-gtm-data='{"eventCategory":"Nav_Journal","eventAction":"Categories journal","eventLabel":"Santé"}'>Santé</a>, <a href="../../secteur-public/index.html" class="c-articleInfo_category_link" rel="tag" data-gtm="target" data-gtm-data='{"eventCategory":"Nav_Journal","eventAction":"Categories journal","eventLabel":"Secteur public"}'>Secteur public</a></p>                                    <div class="c-social -marginTop u-none@to-small">
+                                        <aside class="c-social" data-module-share>
+        <button type="button" class="c-social_link -black" data-share="item" data-share-url="https://iti.ca/fr/blogue/infrastructure-infonuagique/repenser-ti-grace-daas/" data-share-platform="linkedin" data-share-label="LinkedIn" data-gtm="target" data-gtm-data="{&quot;eventCategory&quot;:&quot;Medias sociaux&quot;,&quot;eventAction&quot;:&quot;Clic&quot;,&quot;eventLabel&quot;:&quot;LinkedIn&quot;}">
+        <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-linkedin"></use></svg>
+    </button>
+    <button type="button" class="c-social_link -black" data-share="item" data-share-url="https://iti.ca/fr/blogue/infrastructure-infonuagique/repenser-ti-grace-daas/" data-share-platform="twitter" data-share-label="Twitter" data-gtm="target" data-gtm-data="{&quot;eventCategory&quot;:&quot;Medias sociaux&quot;,&quot;eventAction&quot;:&quot;Clic&quot;,&quot;eventLabel&quot;:&quot;Twitter&quot;}">
+        <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-twitter"></use></svg>
+    </button>
+    <button type="button" class="c-social_link -black" data-share="item" data-share-url="https://iti.ca/fr/blogue/infrastructure-infonuagique/repenser-ti-grace-daas/" data-share-platform="facebook" data-share-label="Facebook" data-gtm="target" data-gtm-data="{&quot;eventCategory&quot;:&quot;Medias sociaux&quot;,&quot;eventAction&quot;:&quot;Clic&quot;,&quot;eventLabel&quot;:&quot;Facebook&quot;}">
+        <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-facebook"></use></svg>
+    </button>
+</aside>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="o-layout_item u-7/10@from-medium">
+                            <div class="u-relative">
+                                <div class="c-section_button -with-img">
+                                    <div></div>
+                                    <span class="c-shape -plus">
+                                        <div data-scroll data-scroll-speed="2">
+                                            <div class="u-anim -delay5">
+                                                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#shape-plus"></use></svg>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </div>
+                                                                    <figure class="c-figure -offsetRight u-anim -delay5" id="c-entry-2074-featured-image">
+                                        <div class="o-ratio u-5:3 -parallax">
+                                            <div class="o-ratio_content -parallax" data-scroll data-scroll-speed="-1" data-scroll-target="#c-entry-2074-featured-image">
+                                                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-load-src="https://iti.ca/uploads/2020/09/repenser-informatique-daas.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </figure>
+                                                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <section id="main">
+                <section class="c-section -marginBottomMedium" data-scroll-section>
+    <div class="o-container">
+        <div class="o-layout">
+            <div class="c-heading -h5 o-layout_item u-1/2@from-small">
+                <div class="s-content">
+                    <p>Les entreprises font désormais face à des nouveaux défis qui proviennent non seulement du marché et de la compétition, mais également de leurs ressources à l’interne. En effet, la main-d’œuvre d’aujourd’hui exige des conditions de travail modernes : ordinateurs performants, accès aux données en tout temps, télétravail, horaires flexibles … Et ce, dans un contexte de pénurie de main-d’œuvre qualifiée.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="c-section -marginBottomMedium" data-scroll-section>
+    <div class="o-container">
+                    <div class="o-layout -gutter">
+                <div class="o-layout_item u-3/10@from-medium"></div>
+                <div class="o-layout_item u-6/10@from-medium">
+                    <div class="c-section_wrap">
+                        <div class="s-content">
+                            <p>Il ne suffit donc plus de renouveler sa flotte d’ordinateurs aux cinq ans. Il faut offrir aux usagers un support rapide, il faut assurer un accès facile aux données importantes tout en s’assurant qu’elles restent en sécurité, et il faut conserver sa flotte à niveau sans mettre en jeu la santé financière de votre organisation.</p>
+<p>Comment s’adapter à cette nouvelle réalité? Comment les dirigeants peuvent-ils tirer avantage de ce changement de paradigme?</p>
+<h3>Une nouvelle perception des TI</h3>
+<p>Plutôt que de voir l’informatique comme des biens coûteux qui s’ajoutent aux actifs de l’entreprise, un nouveau modèle vient changer la donne. En effet, le <em>Device as a Service</em>, ou DaaS, simplifie grandement la gestion des parcs et du matériel informatiques en les traitant comme un service dont votre entreprise bénéficie plutôt qu’un fardeau dont elle s’encombre.</p>
+<p>Le concept repose sur une analyse compréhensive des besoins et des processus internes afin de concevoir une solution qui offre un maximum de bénéfices sans les contraintes financières et logistiques des modèles classiques en informatique. Plutôt que d’acquérir des serveurs et des postes de travail avec un coût initial astronomique, tout l’équipement nécessaire est fourni, configuré, installé et entretenu selon un coût mensuel.</p>
+<p>Le DaaS permet donc aux entreprises d’opérer avec des outils performants, de profiter d’un support complet provenant d’un fournisseur unique et d’alléger le fardeau financier de ces outils avec des mensualités abordables et prévisibles.</p>
+<h3>Gestion centralisée, point de contact unique</h3>
+<p>Des dizaines de postes de travail, des portables, une salle de serveur, des applications, des licences… La gestion d’un parc informatique peut rapidement devenir très complexe.</p>
+<p>Un avantage important du DaaS est qu’il permet de centraliser la gestion des actifs informatiques en un seul endroit. Ainsi, que ce soit pour ajouter une licence Office 365 supplémentaire, pour obtenir un portable entièrement configuré pour un nouvel employé, ou pour augmenter la capacité de calcul des serveurs, il n’y a qu’un seul fournisseur à contacter.</p>
+<h3>Performances et sécurité</h3>
+<p>Alors que les entreprises se disputent les meilleurs talents, les travailleurs d’aujourd’hui ont des attentes élevées quant à leur environnement et à leurs conditions de travail. Le DaaS permet à votre organisation d’acquérir de l’équipement à la fine pointe afin que vos équipes restent performantes.</p>
+<p>Sous ce modèle, vous profiterez d’ordinateurs de dernière génération, d’applications configurées et à jour, et d’une sécurité optimale. Il sera possible d’accéder aux données importantes de n’importe où, en tout temps et ce, sans compromis de performance ou de sécurité.</p>
+<p>En effet, votre fournisseur prend aussi en charge la sécurité de vos appareils. Les anti-virus, les mises-à-jour, les filtres antipourriels, et toutes les mises à niveau sont inclus.</p>
+<h3>Pas de fardeau financier</h3>
+<p>Finalement, c’est au niveau budgétaire que les gestionnaires d’entreprise bénéficient grandement du modèle DaaS. Puisque le parc informatique devient un service, les actifs matériels qui en font partie ne sont plus un fardeau sur le bilan financier de l’entreprise.</p>
+<p>Conséquemment, le capital et la capacité d’emprunt sont peuvent être utilisés pour des projets à valeur ajoutée pour votre organisation, plutôt que pour l’achat, le remplacement et la gestion de matériel TI.</p>
+<p>Avec une seule mensualité qui s’adapte selon vos besoins et votre utilisation, votre entreprise peut offrir à vos équipes du matériel à la fine pointe, des logiciels performants, des données accessibles et sécuritaires.</p>
+<h3>Se moderniser pour mieux performer avec le DaaS</h3>
+<p>Les gestionnaires font face à une pression constante pour mettre en place et garder à jour des solutions informatiques de plus en plus complexes. Heureusement, il y a une solution.</p>
+<p>Le DaaS est un modèle innovant qui permet de repenser la façon dont vous dotez votre organisation des outils dont elle a besoin. Vous pouvez profiter dès maintenant d’équipement à la fine pointe sans investissement initial majeur. Un seul fournisseur et une seule mensualité pour tout ce dont vous avez besoin.</p>
+<p>Vous aimeriez en savoir plus? <a href="../../../contact/index.html">Contactez un de nos experts</a>!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+</section>
+            </section>
+
+                    <aside id="c-callout-appointment" class="c-section -margin" data-scroll-section>
+            <div class="o-container">
+                <div class="o-layout -gutter">
+                    <div class="o-layout_item u-1/10@from-medium"></div>
+                    <div class="o-layout_item u-8/10@from-medium">
+                        <div class="c-section -paddingMedium -paddingLeftRight u-text-center -blue">
+                            <div class="o-layout">
+                                <div class="o-layout_item u-3/4@from-small">
+                                        <div class="c-section_category">
+        <p>Contactez-nous</p>
+    </div>
+    <h3 class="c-heading -h3">Parlez avec l&#039;un de nos experts TI.</h3>
+<p>Comprendre, conseiller, concrétiser. Voilà la force de nos experts TI, prêts à créer votre solution sur mesure!</p>
+    <div class="c-section_button">
+                <a class="c-button -white" href="../../../contact/index.html" data-gtm="target" data-gtm-data='{&quot;eventCategory&quot;:&quot;Contact&quot;,&quot;eventAction&quot;:&quot;Prendre un rendez-vous&quot;}'>
+                    <span class="c-button_label">Contacter un expert TI</span>
+        </a>
+    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o-layout_item u-1/10@from-medium"></div>
+                </div>
+            </div>
+        </aside>
+        
+            <aside class="c-section -margin" data-scroll-section data-module-slider>
+    <div class="o-container u-overflow">
+         <header class="c-section_header -margin">
+            <div class="o-layout -bottom">
+                <div class="o-layout_item u-2/4@small u-2/5@from-medium">
+                                            <div class="c-section_category">
+                            <p>Articles, études de cas et livres blancs <sup>102</sup></p>
+                        </div>
+                                                                <h3 class="c-heading -h3 -noMargin">Vous aimeriez aussi</h3>
+                                    </div>
+                                    <div class="o-layout_item u-2/4@small u-3/5@from-medium u-text-right">
+                        <div class="c-slider_buttons">
+                            <button class="c-slider_button -prev" data-slider="prev">
+                                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-left"></use></svg>
+                            </button>
+                            <button class="c-slider_button -next" data-slider="next">
+                                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+                            </button>
+                        </div>
+                    </div>
+                            </div>
+        </header>
+        <div data-slider="container">
+            <div class="c-slider -smallMargin -margin o-layout swiper-wrapper">
+                                    <div class="c-slider_slide o-layout_item u-5/6@small u-2/3@from-medium u-6/10@from-enormous swiper-slide">
+                        <article class="c-card -article">
+                            <a class="c-card_link" href="../../general/le-college-ahuntsic-poursuit-son-virage-vers-linfonuagique/index.html" data-gtm="target" data-gtm-data='{&quot;eventCategory&quot;:&quot;Nav_Journal&quot;,&quot;eventAction&quot;:&quot;Article&quot;,&quot;eventLabel&quot;:&quot;Le Coll\u00e8ge Ahuntsic poursuit son virage vers l\u2019infonuagique&quot;}'>
+                                                                    <div class="c-card_image">
+                                        <img src="data:image/svg+xml,%3Csvg xmlns=&#039;http://www.w3.org/2000/svg&#039; viewBox=&#039;0 0 460 430&#039;%3E%3C/svg%3E" data-load-src="https://iti.ca/uploads/2022/07/img-college-ahuntsic-920x860px-thumbnail-460x430.jpg" alt="">
+                                    </div>
+                                                                <div class="c-card_wrap">
+                                    <div class="c-card_main">
+                                        <h2 class="c-heading -h6">Le Collège Ahuntsic poursuit son virage vers l’infonuagique</h2>
+                                        <p>En 2022, le Collège Ahuntsic a poursuivi sa transformation vers un environnement de travail moderne en basculant ses&hellip;</p>
+                                    </div>
+                                    <div class="c-card_footer">
+                                        <span>
+                                            <span class="c-card_footer_icon c-circleIcon -green">
+                                                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#format-article"></use></svg>
+                                            </span>
+                                            Article                                        </span>
+                                        <div class="c-card_footer_button">
+                                            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                                        <div class="c-slider_slide o-layout_item u-5/6@small u-2/3@from-medium u-6/10@from-enormous swiper-slide">
+                        <article class="c-card -article">
+                            <a class="c-card_link" href="../iti-democratise-lenseignement-a-distance-pour-12-cegeps/index.html" data-gtm="target" data-gtm-data='{&quot;eventCategory&quot;:&quot;Nav_Journal&quot;,&quot;eventAction&quot;:&quot;Article&quot;,&quot;eventLabel&quot;:&quot;ITI d\u00e9mocratise l\u2019enseignement \u00e0 distance pour 12 c\u00e9geps&quot;}'>
+                                                                    <div class="c-card_image">
+                                        <img src="data:image/svg+xml,%3Csvg xmlns=&#039;http://www.w3.org/2000/svg&#039; viewBox=&#039;0 0 460 430&#039;%3E%3C/svg%3E" data-load-src="https://iti.ca/uploads/2022/05/img-enseignement-distance-920x860px-thumbnail-460x430.jpg" alt="">
+                                    </div>
+                                                                <div class="c-card_wrap">
+                                    <div class="c-card_main">
+                                        <h2 class="c-heading -h6">ITI démocratise l’enseignement à distance pour 12 cégeps</h2>
+                                        <p>Les mesures sanitaires mises en place par le gouvernement du Québec pour contrer la pandémie de COVID-19 ont&hellip;</p>
+                                    </div>
+                                    <div class="c-card_footer">
+                                        <span>
+                                            <span class="c-card_footer_icon c-circleIcon -green">
+                                                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#format-article"></use></svg>
+                                            </span>
+                                            Article                                        </span>
+                                        <div class="c-card_footer_button">
+                                            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                                        <div class="c-slider_slide o-layout_item u-5/6@small u-2/3@from-medium u-6/10@from-enormous swiper-slide">
+                        <article class="c-card -article">
+                            <a class="c-card_link" href="../../corporatif/iti-d2v-analytics-intelligence-donnees-bonifier-intelligence-ti/index.html" data-gtm="target" data-gtm-data='{&quot;eventCategory&quot;:&quot;Nav_Journal&quot;,&quot;eventAction&quot;:&quot;Article&quot;,&quot;eventLabel&quot;:&quot;ITI x D2V Analytics : l\u2019intelligence des donn\u00e9es pour bonifier l\u2019intelligence TI&quot;}'>
+                                                                    <div class="c-card_image">
+                                        <img src="data:image/svg+xml,%3Csvg xmlns=&#039;http://www.w3.org/2000/svg&#039; viewBox=&#039;0 0 460 430&#039;%3E%3C/svg%3E" data-load-src="https://iti.ca/uploads/2022/05/img-D2V-acquisition-fr-920x860px-thumbnail-460x430.jpg" alt="">
+                                    </div>
+                                                                <div class="c-card_wrap">
+                                    <div class="c-card_main">
+                                        <h2 class="c-heading -h6">ITI x D2V Analytics : l’intelligence des données pour bonifier l’intelligence TI</h2>
+                                        <p>Toujours avec l’ambition d’être un leader canadien en transformation technologique, ITI conclut une autre transaction stratégique. L’entreprise montréalaise&hellip;</p>
+                                    </div>
+                                    <div class="c-card_footer">
+                                        <span>
+                                            <span class="c-card_footer_icon c-circleIcon -green">
+                                                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#format-article"></use></svg>
+                                            </span>
+                                            Article                                        </span>
+                                        <div class="c-card_footer_button">
+                                            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                                        <div class="c-slider_slide o-layout_item u-5/6@small u-2/3@from-medium u-6/10@from-enormous swiper-slide">
+                        <article class="c-card -article">
+                            <a class="c-card_link" href="../../general/iti-en-9e-place-du-prestigieux-classement-cdn/index.html" data-gtm="target" data-gtm-data='{&quot;eventCategory&quot;:&quot;Nav_Journal&quot;,&quot;eventAction&quot;:&quot;Article&quot;,&quot;eventLabel&quot;:&quot;ITI,  en 9e place du prestigieux classement CDN&quot;}'>
+                                                                    <div class="c-card_image">
+                                        <img src="data:image/svg+xml,%3Csvg xmlns=&#039;http://www.w3.org/2000/svg&#039; viewBox=&#039;0 0 460 430&#039;%3E%3C/svg%3E" data-load-src="https://iti.ca/uploads/2022/04/blogue-solution-provider-thumbnail-920x860px-460x430.jpg" alt="">
+                                    </div>
+                                                                <div class="c-card_wrap">
+                                    <div class="c-card_main">
+                                        <h2 class="c-heading -h6">ITI, en 9e place du prestigieux classement CDN</h2>
+                                        <p>ITI, en 9e place du prestigieux classement CDN</p>
+                                    </div>
+                                    <div class="c-card_footer">
+                                        <span>
+                                            <span class="c-card_footer_icon c-circleIcon -green">
+                                                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#format-article"></use></svg>
+                                            </span>
+                                            Article                                        </span>
+                                        <div class="c-card_footer_button">
+                                            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                                        <div class="c-slider_slide o-layout_item u-5/6@small u-2/3@from-medium u-6/10@from-enormous swiper-slide">
+                        <article class="c-card -article">
+                            <a class="c-card_link" href="../../expertise-certifications/gestion-des-actifs-ti/index.html" data-gtm="target" data-gtm-data='{&quot;eventCategory&quot;:&quot;Nav_Journal&quot;,&quot;eventAction&quot;:&quot;Article&quot;,&quot;eventLabel&quot;:&quot;Gestion des actifs TI\u2009: 3&nbsp;conseils pour performer dans le contexte actuel&quot;}'>
+                                                                    <div class="c-card_image">
+                                        <img src="data:image/svg+xml,%3Csvg xmlns=&#039;http://www.w3.org/2000/svg&#039; viewBox=&#039;0 0 460 430&#039;%3E%3C/svg%3E" data-load-src="https://iti.ca/uploads/2022/01/thumbnail-920x860px-gestion-actifs.jpg" alt="">
+                                    </div>
+                                                                <div class="c-card_wrap">
+                                    <div class="c-card_main">
+                                        <h2 class="c-heading -h6">Gestion des actifs TI : 3&nbsp;conseils pour performer dans le contexte actuel</h2>
+                                        <p>Gestion des actifs TI : 3 conseils pour performer dans le contexte actuel</p>
+                                    </div>
+                                    <div class="c-card_footer">
+                                        <span>
+                                            <span class="c-card_footer_icon c-circleIcon -green">
+                                                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#format-article"></use></svg>
+                                            </span>
+                                            Article                                        </span>
+                                        <div class="c-card_footer_button">
+                                            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                                        <div class="c-slider_slide o-layout_item u-5/6@small u-2/3@from-medium u-6/10@from-enormous swiper-slide">
+                        <article class="c-card -article">
+                            <a class="c-card_link" href="../../corporatif/evoluez-rythme-vxrail/index.html" data-gtm="target" data-gtm-data='{&quot;eventCategory&quot;:&quot;Nav_Journal&quot;,&quot;eventAction&quot;:&quot;Whitepaper&quot;,&quot;eventLabel&quot;:&quot;VxRail de Dell EMC&quot;}'>
+                                                                    <div class="c-card_image">
+                                        <img src="data:image/svg+xml,%3Csvg xmlns=&#039;http://www.w3.org/2000/svg&#039; viewBox=&#039;0 0 460 430&#039;%3E%3C/svg%3E" data-load-src="https://iti.ca/uploads/2021/12/vx-rail-fr-thumb.jpg" alt="">
+                                    </div>
+                                                                <div class="c-card_wrap">
+                                    <div class="c-card_main">
+                                        <h2 class="c-heading -h6">VxRail de Dell EMC</h2>
+                                        <p>Une solution sur site Évoluez à votre rythme avec VxRail de Dell EMC Dans un contexte de pénurie&hellip;</p>
+                                    </div>
+                                    <div class="c-card_footer">
+                                        <span>
+                                            <span class="c-card_footer_icon c-circleIcon -blue">
+                                                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#format-whitepaper"></use></svg>
+                                            </span>
+                                            Livre blanc                                        </span>
+                                        <div class="c-card_footer_button">
+                                            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                                        <div class="c-slider_slide o-layout_item u-5/6@small u-2/3@from-medium u-6/10@from-enormous swiper-slide">
+                        <article class="c-card -article">
+                            <a class="c-card_link" href="../../corporatif/powerstore-500-pme/index.html" data-gtm="target" data-gtm-data='{&quot;eventCategory&quot;:&quot;Nav_Journal&quot;,&quot;eventAction&quot;:&quot;Whitepaper&quot;,&quot;eventLabel&quot;:&quot;8 raisons pour choisir PowerStore 500&quot;}'>
+                                                                    <div class="c-card_image">
+                                        <img src="data:image/svg+xml,%3Csvg xmlns=&#039;http://www.w3.org/2000/svg&#039; viewBox=&#039;0 0 460 430&#039;%3E%3C/svg%3E" data-load-src="https://iti.ca/uploads/2021/12/dell-powerstore-500-thumb.jpg" alt="">
+                                    </div>
+                                                                <div class="c-card_wrap">
+                                    <div class="c-card_main">
+                                        <h2 class="c-heading -h6">8 raisons pour choisir PowerStore 500</h2>
+                                        <p>PowerStore 500 de Dell Technologies Le meilleur de la technologie de stockage moderne pour les PME Le Dell&hellip;</p>
+                                    </div>
+                                    <div class="c-card_footer">
+                                        <span>
+                                            <span class="c-card_footer_icon c-circleIcon -blue">
+                                                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#format-whitepaper"></use></svg>
+                                            </span>
+                                            Livre blanc                                        </span>
+                                        <div class="c-card_footer_button">
+                                            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                                </div>
+        </div>
+    </div>
+            <div class="o-container">
+            <a class="c-button -white" href="../../index.html" data-gtm="target" data-gtm-data='{&quot;eventCategory&quot;:&quot;Nav_Journal&quot;,&quot;eventAction&quot;:&quot;Voir tous les articles&quot;}'>
+                <span class="c-button_label">Lisez notre blogue</span>
+                <span class="c-button_icon">
+                    <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+                </span>
+            </a>
+        </div>
+    </aside>
+
+            
+
+            
+        
+    
+            <div data-scroll-section>
+            <span class="c-modal_trigger" data-scroll data-scroll-call="show, Modal, newsletter"></span>
+        </div>
+    
+</main>
+
+                <footer class="c-footer" data-scroll-section>
+    <div class="o-container" data-scroll data-scroll-repeat data-scroll-call="toggleVisibility, StickyNav">
+        <div class="o-layout -flex -reverse@to-small">
+            <div class="o-layout_item u-3/10@from-small">
+                                    <div class="c-footer_newsletter">
+                        <p class="c-section_category">Infolettre ITI</p>
+                        <label for="c-form-newsletter-footer-email">
+                            <span class="c-heading -h4 u-block">Soyez les premiers informés.</span>
+                        </label>
+                        <form id="c-form-newsletter-footer" class="c-footer_form" action="https://app.cyberimpact.com/optin" method="POST" target="_blank" accept-charset="utf-8" data-gtm="form" data-gtm-data="{&quot;eventCategory&quot;:&quot;Lead&quot;,&quot;eventAction&quot;:&quot;Infolettre&quot;,&quot;eventLabel&quot;:&quot;Footer&quot;}">
+    <div class="c-form_inputWrap">
+        <label for="c-form-newsletter-footer-email" class="u-screen-reader-text">Adresse courriel</label>
+        <input type="email" id="c-form-newsletter-footer-email" name="ci_email" class="c-form_input" placeholder="Votre adresse courriel" required />
+        <div style="display:block; visibility:hidden; height:1px;">
+            <input style="display:none;" type="text" name="ci_verification" />
+            <input type="hidden" name="ci_groups" value="50" />
+            <input type="hidden" name="ci_account" value="d2b6905b-d634-465a-051f-d450e2b14785" />
+            <input type="hidden" name="ci_language" value="fr_ca" />
+            <input type="hidden" name="ci_sent_url" value="" />
+            <input type="hidden" name="ci_error_url" value="" />
+            <input type="hidden" name="ci_confirm_url" value="" />
+        </div>
+        <button class="c-form_inputButton c-button -transparent -icon" type="submit" aria-label="Envoyer">
+            <span class="c-button_icon">
+                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+            </span>
+        </button>
+    </div>
+</form>
+                    </div>
+                            </div>
+            <div class="o-layout_item u-1/10@from-small"></div>
+            <div class="o-layout_item u-6/10@from-small">
+                <nav class="c-footer_nav">
+                                                                <ul class="c-footer_nav_list">
+                                                            <li class="c-footer_nav_item">
+                                    <a class="c-footer_nav_link" href="../../../solutions-ti/index.html">Solutions TI</a>
+                                </li>
+                                                            <li class="c-footer_nav_item">
+                                    <a class="c-footer_nav_link" href="../../../solutions-humaines/index.html">Solutions humaines</a>
+                                </li>
+                                                            <li class="c-footer_nav_item">
+                                    <a class="c-footer_nav_link is-active" href="../../index.html">Blogue</a>
+                                </li>
+                                                            <li class="c-footer_nav_item">
+                                    <a class="c-footer_nav_link" href="../../../a-propos/index.html">À propos</a>
+                                </li>
+                                                            <li class="c-footer_nav_item">
+                                    <a class="c-footer_nav_link" href="../../../travailler-chez-iti/index.html">Travailler chez ITI</a>
+                                </li>
+                                                            <li class="c-footer_nav_item">
+                                    <a class="c-footer_nav_link" href="../../../placement-de-ressources/index.html">Placement de ressources</a>
+                                </li>
+                                                    </ul>
+                                                                                                                                        <a data-load="false" class="c-footer_nav_link -lang" href="../../../../en/blog/infrastructure-cloud/rethinking-it-with-daas/index.html">English</a>
+                                                            </nav>
+                <div class="o-layout -gutterSmall">
+                    <div class="o-layout_item u-2/3@from-small">
+                        <div class="c-footer_title">Autres liens</div>
+                                                                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="https://www.ecsrv.com/PrivateClientLogin.aspx?No=620276" rel="noopener" target="_blank">
+                                    Catalogue en ligne                                                                            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#external"></use></svg>
+                                                                    </a>
+                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="https://www1.procontact.ca/ServiceCall/Login.aspx" rel="noopener" target="_blank">
+                                    Accès à mon compte                                                                            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#external"></use></svg>
+                                                                    </a>
+                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="../../../contact/index.html">
+                                    Contact                                                                    </a>
+                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="../../../legal/index.html">
+                                    Conditions d’utilisation                                                                    </a>
+                                                                                                </div>
+                    <div class="o-layout_item u-1/3@from-small">
+                                                                            <div class="c-footer_title">Industries <sup>05</sup></div>
+                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="../../../industries/moyennes-entreprises/index.html">Moyennes entreprises</a>
+                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="../../../industries/corporatif/index.html">Grandes entreprises</a>
+                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="../../../industries/education/index.html">Éducation</a>
+                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="../../../industries/gouvernement/index.html">Gouvernement</a>
+                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="../../../industries/sante/index.html">Santé</a>
+                                                                                                </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-footer_bottom">
+            <div class="o-layout">
+                <div class="o-layout_item u-3/10@from-small">
+                    <div class="c-footer_social c-social">
+                                                    <a class="c-social_link -white -small" href="https://www.linkedin.com/company/intelligenceiti" rel="nooopener" target="_blank" aria-label="LinkedIn" data-gtm="target" data-gtm-data='{"eventCategory":"Medias sociaux","eventAction":"Clic","eventLabel":"linkedin"}'>
+                                <svg aria-hidden="true" focusable="false">
+                                    <use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-linkedin"></use>
+                                </svg>
+                            </a>
+                                                    <a class="c-social_link -white -small" href="https://facebook.com/intelligenceITI" rel="nooopener" target="_blank" aria-label="Facebook" data-gtm="target" data-gtm-data='{"eventCategory":"Medias sociaux","eventAction":"Clic","eventLabel":"facebook"}'>
+                                <svg aria-hidden="true" focusable="false">
+                                    <use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-facebook"></use>
+                                </svg>
+                            </a>
+                                                    <a class="c-social_link -white -small" href="https://www.youtube.com/channel/UC4eVFxF_vWoitpJ2H-27sAA" rel="nooopener" target="_blank" aria-label="YouTube" data-gtm="target" data-gtm-data='{"eventCategory":"Medias sociaux","eventAction":"Clic","eventLabel":"youtube"}'>
+                                <svg aria-hidden="true" focusable="false">
+                                    <use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-youtube"></use>
+                                </svg>
+                            </a>
+                                            </div>
+                </div>
+                <div class="o-layout_item u-1/10@from-small"></div>
+                <div class="o-layout_item u-6/10@from-small">
+                    <div class="o-layout -gutterSmall -gutterBottom">
+                        <div class="o-layout_item u-1/2@from-tiny">
+                            <p>
+                                Sans frais                                <br>
+                                <a class="o-link -white" href="tel:+18882511622">1-888-251-1622</a>
+                            </p>
+                        </div>
+                                                    <div class="o-layout_item u-1/2@from-tiny">
+                                <p>
+                                    ITI Québec                                    <br>
+                                    <a class="o-link -white" href="tel:+14188711622">1-418-871-1622</a>
+                                </p>
+                            </div>
+                                                    <div class="o-layout_item u-1/2@from-tiny">
+                                <p>
+                                    ITI Montréal                                    <br>
+                                    <a class="o-link -white" href="tel:+15149401662">1-514-940-1662</a>
+                                </p>
+                            </div>
+                                                    <div class="o-layout_item u-1/2@from-tiny">
+                                <p>
+                                    ITI Toronto, Kingston et Ottawa                                    <br>
+                                    <a class="o-link -white" href="tel:+18665496558">1-866-549-6558</a>
+                                </p>
+                            </div>
+                                            </div>
+                                    </div>
+            </div>
+            <div class="c-footer_copy">
+                <p>2022 © ITI</p>
+                <p>Site Web par <a class="c-footer_copy_link" href="https://locomotive.ca" target="_blank" rel="nooopener">Locomotive Inc.</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="u-overflow" id="backtop">
+        <div class="c-footer_backtop" data-scroll data-scroll-speed="-3" data-scroll-position="bottom" data-scroll-target="#backtop">
+            <div class="c-footer_backtop_bg" data-load-style="background-image: url('https://iti.ca/themes/iti/assets/images/static/backtop.jpg')"></div>
+            <button class="c-footer_backtop_icon" data-module-scrollto data-scrollto-href="top" data-scroll data-scroll-speed="1.5" data-scroll-position="bottom" data-scroll-target="#backtop" aria-label="Retourner au haut de la page.">
+                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-up"></use></svg>
+            </button>
+        </div>
+    </div>
+</footer>
+
+                            </div>
+
+                    </div>
+
+        <section id="c-newsletterModal" class="c-newsletterModal -has-image c-modal -scrollable" aria-labelledby="c-newsletterModal-label" data-module-modal="newsletter" data-modal-once style="opacity:0;">
+    <div class="c-modal_bg" data-modal="dismiss"></div>
+
+    <div class="c-modal_outer">
+        <button class="c-button -blue -large -icon -rounded -circleIcon -close c-modal_close" data-modal="dismiss" aria-label="Fermer">
+            <span class="c-button_icon">
+                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#close"></use></svg>
+            </span>
+        </button>
+        <div class="c-modal_inner" data-modal="body">
+                            <img src="../../../../uploads/2022/04/pop-up-infolettre.jpg" alt="pop up infolettre">
+                        <div class="c-modal_content">
+                                    <h3 class="c-heading -h4 u-block">Infolettre ITI</h3>
+                                                    <p class="c-heading -medium">Comprendre. Conseiller. Concrétiser.</p>
+                                                    <p>Retrouvez l’actualité TI démocratisée par des experts passionnés. Des points de vue sur des enjeux touchant votre contexte d’affaires. Des invitations exclusives aux événements et webinaires.  </p>
+                                <form id="c-form-newsletter-modal" class="c-modal_form" action="https://app.cyberimpact.com/optin" method="POST" target="_blank" accept-charset="utf-8" data-gtm="form" data-gtm-data="{&quot;eventCategory&quot;:&quot;Lead&quot;,&quot;eventAction&quot;:&quot;Infolettre&quot;,&quot;eventLabel&quot;:&quot;Modal&quot;}">
+    <div class="c-form_inputWrap">
+        <label for="c-form-newsletter-modal-email" class="u-screen-reader-text">Adresse courriel</label>
+        <input type="email" id="c-form-newsletter-modal-email" name="ci_email" class="c-form_input -gray" placeholder="Votre adresse courriel" required />
+        <div style="display:block; visibility:hidden; height:1px;">
+            <input style="display:none;" type="text" name="ci_verification" />
+            <input type="hidden" name="ci_groups" value="50" />
+            <input type="hidden" name="ci_account" value="d2b6905b-d634-465a-051f-d450e2b14785" />
+            <input type="hidden" name="ci_language" value="fr_ca" />
+            <input type="hidden" name="ci_sent_url" value="" />
+            <input type="hidden" name="ci_error_url" value="" />
+            <input type="hidden" name="ci_confirm_url" value="" />
+        </div>
+        <button class="c-form_inputButton c-button -transparent -icon" type="submit" aria-label="Envoyer">
+            <span class="c-button_icon">
+                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+            </span>
+        </button>
+    </div>
+</form>
+                                    <small>Nous ne partagerons jamais vos informations et vous pourrez toujours vous désabonner en un simple clic.</small>
+                            </div>
+        </div>
+    </div>
+</section>
+        <section id="c-embedModal" class="c-modal c-videoModal" data-module-embed-modal="embed" style="opacity:0;">
+    <div class="c-modal_bg" data-embed-modal="dismiss"></div>
+
+    <button class="c-button -blue -large -icon -rounded -circleIcon -close c-modal_close" data-embed-modal="dismiss" aria-label="Fermer">
+        <span class="c-button_icon">
+            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#close"></use></svg>
+        </span>
+    </button>
+
+    <div class="c-modal_outer">
+        <div class="c-modal_inner" data-embed-modal="body"></div>
+    </div>
+</section>
+
+                
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js" id="iti-babel-polyfill-js" crossorigin="anonymous" nomodule></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll%2Cfetch%2CCustomEvent%2CElement.prototype.matches%2CNodeList.prototype.forEach%2CAbortController%2Cconsole.warn%2CElement.prototype.remove" id="iti-ecma-polyfill-js" crossorigin="anonymous" nomodule></script>
+<script src="../../../../themes/iti/assets/scripts/vendors.js%3Fver=202206271314" id="iti-theme-vendors-js" defer></script>
+<script type='text/javascript' id='iti-theme-app-js-extra'>
+/* <![CDATA[ */
+var itiData = {"ajax_url":"https:\/\/iti.ca\/wp-ajax.php","theme_url":"https:\/\/iti.ca\/themes\/iti","l10n":{"fileExceedsLimit":"Le fichier d\u00e9passe la limite de taille","illegalFileExtension":"Ce type de fichier n\u2019est pas autoris\u00e9.","invalidFileExtension":"Ce type de fichier n\u2019est pas autoris\u00e9. Doit \u00eatre l\u2019un des types suivants : ","loading":"Chargement\u2026","maxFilesReached":"Nombre maximal de fichiers atteints","errorTryAgain":"Une erreur est survenue. Veuillez essayer \u00e0 nouveau.","errorTryLater":"Une erreur est survenue. Veuillez essayer \u00e0 nouveau plus tard.","unknownError":"Une erreur s\u2019est produite."}};
+/* ]]> */
+</script>
+<script src="../../../../themes/iti/assets/scripts/app.js%3Fver=202206271314" id="iti-theme-app-js" defer></script>
+    </body>
+</html>

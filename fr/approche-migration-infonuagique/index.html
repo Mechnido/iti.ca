@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="is-loading">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<link rel="alternate" href="../../en/itis-approach-for-successful-cloud-migration/index.html" hreflang="en" />
+<link rel="alternate" href="index.html" hreflang="fr" />
+
+	<title>L&#039;approche ITI pour une migration cloud réussie | ITI</title>
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="fr_CA" />
+	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="L&#039;approche ITI pour une migration cloud réussie | ITI" />
+	<meta property="og:description" content="L&#039;approche ITI pour une migration cloud réussie Basée sur le Framework d’adoption du cloud de Microsoft, ITI privilégie une approche consultative et collaborative qui permet à votre organisation de planifier et d’exécuter votre migration et de vous assurer que vous bénéficiez des meilleures pratiques infonuagiques. Nous vous promettons un accompagnement humain, du début à la [&hellip;]" />
+	<meta property="og:url" content="https://iti.ca/fr/approche-migration-infonuagique/" />
+	<meta property="og:site_name" content="ITI" />
+	<meta property="article:publisher" content="https://facebook.com/intelligenceITI" />
+	<meta property="article:modified_time" content="2022-01-26T21:29:26+00:00" />
+	<meta property="og:image" content="https://iti.ca/uploads/2021/12/certifications-iti-microsoft-gold1-300x93.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Estimation du temps de lecture" />
+	<meta name="twitter:data1" content="2 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://iti.ca/#organization","name":"ITI","url":"https://iti.ca/","sameAs":["https://facebook.com/intelligenceITI","https://www.linkedin.com/company/intelligenceiti","https://www.youtube.com/channel/UC4eVFxF_vWoitpJ2H-27sAA"],"logo":{"@type":"ImageObject","@id":"https://iti.ca/#logo","inLanguage":"fr-CA","url":"https://iti.ca/uploads/2020/06/ITI_Seul_RVB_Noir.png","contentUrl":"https://iti.ca/uploads/2020/06/ITI_Seul_RVB_Noir.png","width":835,"height":667,"caption":"ITI"},"image":{"@id":"https://iti.ca/#logo"}},{"@type":"WebSite","@id":"https://iti.ca/#website","url":"https://iti.ca/","name":"ITI","description":"Intelligence TI. Intelligence humaine.","publisher":{"@id":"https://iti.ca/#organization"},"inLanguage":"fr-CA"},{"@type":"ImageObject","@id":"https://iti.ca/fr/approche-migration-infonuagique/#primaryimage","inLanguage":"fr-CA","url":"https://iti.ca/uploads/2021/12/certifications-iti-microsoft-gold1-300x93.png","contentUrl":"https://iti.ca/uploads/2021/12/certifications-iti-microsoft-gold1-300x93.png"},{"@type":"WebPage","@id":"https://iti.ca/fr/approche-migration-infonuagique/#webpage","url":"https://iti.ca/fr/approche-migration-infonuagique/","name":"L'approche ITI pour une migration cloud r\u00e9ussie | ITI","isPartOf":{"@id":"https://iti.ca/#website"},"primaryImageOfPage":{"@id":"https://iti.ca/fr/approche-migration-infonuagique/#primaryimage"},"datePublished":"2021-12-09T14:04:54+00:00","dateModified":"2022-01-26T21:29:26+00:00","breadcrumb":{"@id":"https://iti.ca/fr/approche-migration-infonuagique/#breadcrumb"},"inLanguage":"fr-CA","potentialAction":[{"@type":"ReadAction","target":["https://iti.ca/fr/approche-migration-infonuagique/"]}]},{"@type":"BreadcrumbList","@id":"https://iti.ca/fr/approche-migration-infonuagique/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://iti.ca/fr/"},{"@type":"ListItem","position":2,"name":"L&#8217;approche ITI pour une migration cloud r\u00e9ussie"}]}]}</script>
+
+
+<meta name="theme-color" content="#E1EFF6">
+<meta name="msapplication-config" content="https://iti.ca/themes/iti/browserconfig.xml">
+<link rel="icon" href="../../themes/iti/assets/images/favicon/favicon.svg">
+<link rel="mask-icon" href="../../themes/iti/assets/images/favicon/mask-icon.svg" color="#1D1D1B">
+<link rel="apple-touch-icon" href="../../themes/iti/assets/images/favicon/apple-touch-icon.png">
+<link rel="manifest" href="../../themes/iti/site.webmanifest.html">
+<style id="iti-theme-critical-inline-css">
+.c-intro{visibility:hidden;position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden;z-index:9;justify-content:center;align-items:center;display:flex}.has-intro .c-intro{visibility:visible}.is-animated .c-intro{visibility:hidden;transition:visibility 0s .9s}.c-intro svg{position:absolute;top:0;left:50%;width:auto!important;transform:translateX(-50%)!important}.c-intro_text{position:relative;font-size:2rem;z-index:999;text-align:center;font-weight:400;transition:opacity 1.2s cubic-bezier(.075,.82,.165,1)}.has-intro .c-intro_text{opacity:0;transition-delay:3s}.c-intro_text span{font-weight:500}.c-intro_line{opacity:0;transform:translateY(100%);transition:transform 1.2s cubic-bezier(.075,.82,.165,1),opacity 1.2s cubic-bezier(.075,.82,.165,1)}.has-intro .c-intro_line{opacity:1;transform:translateY(0)}.c-intro_line:first-child{transition-delay:.8s}.c-intro_line:last-child{transition-delay:.9s}.c-loader{position:fixed;top:0;right:0;bottom:0;left:0;background-color:#f6f9fb;z-index:10;transition:transform 2.4s cubic-bezier(.075,.82,.165,1),visibility 0s 2.4s;transform:translateZ(0);display:flex;align-items:center;justify-content:center}.has-intro .c-loader{display:none}.is-animated.is-ready .c-loader,.is-transitioned .c-loader,.is-transitioning .c-loader{transform:translateY(-100%);visibility:hidden}.c-loader_logo{position:relative;height:9.33333rem;font-size:0;transition:transform 2.4s cubic-bezier(.075,.82,.165,1)}@media (max-width:699px){.is-animated.is-ready .c-loader_logo,.is-transitioned .c-loader_logo,.is-transitioning .c-loader_logo{transform:translateY(100%)}}@media (min-width:700px){.is-animated.is-ready .c-loader_logo,.is-transitioned .c-loader_logo,.is-transitioning .c-loader_logo{transform:translateY(200%)}}.c-loader_logo_line{display:inline-block;height:100%;width:2.46667rem;background-color:#221e1e;margin:0 1.86667rem;border-radius:.46667rem;transition:transform 1.8s cubic-bezier(.075,.82,.165,1)}.c-loader_logo_line:first-child{transform:translateY(-100vh)}.c-loader_logo_line:nth-child(2){position:absolute;top:0;left:50%;height:2.33333rem;width:5rem;margin-left:-2.46667rem;transform:translateX(-100vw)}.c-loader_logo_line:nth-child(3){height:4.66667rem;transform:translateX(100vw)}.c-loader_logo_line:nth-child(4){transform:translateY(100vh)}.is-loaded .c-loader_logo_line:first-child,.is-loaded .c-loader_logo_line:nth-child(4){transform:translateY(0)}.is-loaded .c-loader_logo_line:nth-child(2),.is-loaded .c-loader_logo_line:nth-child(3){transform:translateX(0)}html.is-loading{cursor:wait}.page{opacity:0;transition:opacity .6s cubic-bezier(.075,.82,.165,1)}.is-animated .page{opacity:1}
+</style>
+<link rel="stylesheet" id="iti-theme-app-css" href="../../themes/iti/assets/styles/app.css%3Fver=202206271314.css" media="print" onload="this.media='all'; this.onload=null; this.isLoaded=true">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M7QCMZL');</script>
+<!-- End Google Tag Manager -->
+<!-- dataLayer Initialization -->
+<script>
+    window.dataLayer = window.dataLayer || [];
+    </script>
+<!-- End dataLayer Initialization -->
+    </head>
+    <body class="" data-module-load data-module-gtm>
+
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7QCMZL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+        <div class="c-intro" data-module-intro>
+    <div class="c-intro_text" aria-label="Après 30 ans, Informatique ProContact devient ITI Informatique.">
+        <div class="c-intro_line" aria-hidden="true">Après 30 ans, </div>
+        <div class="c-intro_line" aria-hidden="true"><span>ProContact</span> devient <span class="u-screen-reader-text">ITI Informatique</span></div>
+    </div>
+</div>
+
+        <div class="c-loader">
+            <div class="c-loader_logo">
+                <div class="c-loader_logo_line"></div>
+                <div class="c-loader_logo_line"></div>
+                <div class="c-loader_logo_line"></div>
+                <div class="c-loader_logo_line"></div>
+            </div>
+        </div>
+
+        <div class="c-transition" data-module-transition></div>
+
+        <div class="page" data-load-container>
+            <!-- dataLayer Event -->
+<script type="application/json" data-load="gtm-event">{"PageType":"Autre"}</script>
+<!-- End dataLayer Event -->
+
+            <a class="u-screen-reader-text -focusable" href="index.html#main" data-scroll-to>Aller au contenu</a>
+
+            <header class="c-header" data-module-header>
+    <a class="c-header_logo" href="../../fr.html" rel="home" aria-label="ITI">
+        <svg aria-hidden="true" focusable="false">
+            <title>ITI</title>
+            <use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#logo-fr"></use>
+        </svg>
+    </a>
+    <nav class="c-header_nav">
+                            <ul class="c-header_nav_list">
+                                    <li class="c-header_nav_item">
+                                                    <a class="c-header_nav_link" href="../solutions-ti/index.html">Solutions TI</a>
+                                            </li>
+                                    <li class="c-header_nav_item">
+                                                    <a class="c-header_nav_link" href="../solutions-humaines/index.html">Solutions humaines</a>
+                                            </li>
+                                    <li class="c-header_nav_item -subnav">
+                                                    <span class="c-header_nav_link">Industries</span>
+                            <div class="c-header_nav_subnav">
+                                <div class="c-header-nav_subnav_bg"></div>
+                                <ul class="c-header_nav_subnav_list">
+                                                                            <li class="c-header_nav_subnav_item">
+                                            <a class="c-header_nav_subnav_link" href="../industries/moyennes-entreprises/index.html">Moyennes entreprises</a>
+                                        </li>
+                                                                            <li class="c-header_nav_subnav_item">
+                                            <a class="c-header_nav_subnav_link" href="../industries/corporatif/index.html">Grandes entreprises</a>
+                                        </li>
+                                                                            <li class="c-header_nav_subnav_item">
+                                            <a class="c-header_nav_subnav_link" href="../industries/education/index.html">Éducation</a>
+                                        </li>
+                                                                            <li class="c-header_nav_subnav_item">
+                                            <a class="c-header_nav_subnav_link" href="../industries/gouvernement/index.html">Gouvernement</a>
+                                        </li>
+                                                                            <li class="c-header_nav_subnav_item">
+                                            <a class="c-header_nav_subnav_link" href="../industries/sante/index.html">Santé</a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                                            </li>
+                                    <li class="c-header_nav_item">
+                                                    <a class="c-header_nav_link" href="../a-propos/index.html">À propos</a>
+                                            </li>
+                                    <li class="c-header_nav_item">
+                                                    <a class="c-header_nav_link" href="../blogue/index.html">Blogue</a>
+                                            </li>
+                                    <li class="c-header_nav_item -subnav">
+                                                    <span class="c-header_nav_link">Emploi</span>
+                            <div class="c-header_nav_subnav">
+                                <div class="c-header-nav_subnav_bg"></div>
+                                <ul class="c-header_nav_subnav_list">
+                                                                            <li class="c-header_nav_subnav_item">
+                                            <a class="c-header_nav_subnav_link" href="../travailler-chez-iti/index.html">Travailler chez ITI</a>
+                                        </li>
+                                                                            <li class="c-header_nav_subnav_item">
+                                            <a class="c-header_nav_subnav_link" href="../placement-de-ressources/index.html">Placement de ressources</a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                                            </li>
+                            </ul>
+                                                                <div class="c-header_nav_item -lang">
+                    <a data-load="false" class="c-header_nav_link" href="../../en/itis-approach-for-successful-cloud-migration/index.html">En</a>
+                </div>
+                            <button class="c-header_nav_burger" data-header="button" aria-label="Menu" type="button">
+            <span class="c-header_nav_burger_icon">
+                <span class="c-header_nav_burger_icon_line"></span>
+                <span class="c-header_nav_burger_icon_line"></span>
+                <span class="c-header_nav_burger_icon_line"></span>
+            </span>
+            <svg class="c-header_nav_burger_close" aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#close"></use></svg>
+        </button>
+        <div class="c-header_nav_button">
+            <button class="c-button -blue -block -medium" type="button" data-header="getInTouch" data-gtm="target" data-gtm-data='{"eventCategory":"Contact","eventAction":"Parlons nous","eventLabel":"https://iti.ca/fr/approche-migration-infonuagique/"}'>
+                <span class="c-button_label">Parlons-nous</span>
+                <span class="c-button_icon -scale">
+                    <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#talk"></use></svg>
+                </span>
+            </button>
+        </div>
+    </nav>
+</header>
+            <nav class="c-nav" data-module-nav>
+    <div class="c-nav_bg" data-nav="close"></div>
+    <div class="c-nav_main">
+        <div class="c-nav_container o-container">
+            <div class="o-layout -gutterTiny">
+                <div class="o-layout_item u-4/10@from-small">
+                                                                <ul class="c-nav_top">
+                                                            <li class="c-nav_item">
+                                                                            <a class="c-nav_link c-heading -h5" href="../solutions-ti/index.html">Solutions TI</a>
+                                                                    </li>
+                                                            <li class="c-nav_item">
+                                                                            <a class="c-nav_link c-heading -h5" href="../solutions-humaines/index.html">Solutions humaines</a>
+                                                                    </li>
+                                                            <li class="c-nav_item">
+                                                                            <a class="c-nav_link c-heading -h5" href="../a-propos/index.html">À propos</a>
+                                                                    </li>
+                                                            <li class="c-nav_item">
+                                                                            <a class="c-nav_link c-heading -h5" href="../blogue/index.html">Blogue</a>
+                                                                    </li>
+                                                            <li class="c-nav_item -subnav">
+                                                                            <span class="c-nav_link c-heading -h5">Industries</span>
+                                        <ul class="c-nav_subnav">
+                                                                                            <li class="c-nav_subnav_item">
+                                                    <a class="c-nav_link -small" href="../industries/moyennes-entreprises/index.html">Moyennes entreprises</a>
+                                                </li>
+                                                                                            <li class="c-nav_subnav_item">
+                                                    <a class="c-nav_link -small" href="../industries/corporatif/index.html">Grandes entreprises</a>
+                                                </li>
+                                                                                            <li class="c-nav_subnav_item">
+                                                    <a class="c-nav_link -small" href="../industries/sante/index.html">Santé</a>
+                                                </li>
+                                                                                            <li class="c-nav_subnav_item">
+                                                    <a class="c-nav_link -small" href="../industries/gouvernement/index.html">Gouvernement</a>
+                                                </li>
+                                                                                            <li class="c-nav_subnav_item">
+                                                    <a class="c-nav_link -small" href="../industries/education/index.html">Éducation</a>
+                                                </li>
+                                                                                    </ul>
+                                                                    </li>
+                                                    </ul>
+                                                        </div>
+                <div class="o-layout_item u-4/10@from-small">
+                                                                <ul>
+                                                            <li>
+                                    <a class="c-nav_link -large c-heading -h5" href="../travailler-chez-iti/index.html">
+                                        Travailler chez ITI                                                                            </a>
+                                </li>
+                                                            <li>
+                                    <a class="c-nav_link -large c-heading -h5" href="../placement-de-ressources/index.html">
+                                        Placement de ressources                                                                            </a>
+                                </li>
+                                                            <li>
+                                    <a class="c-nav_link -large c-heading -h5" href="https://www.ecsrv.com/PrivateClientLogin.aspx?No=620276" rel="noopener" target="_blank">
+                                        Catalogue en ligne                                                                                    <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#external"></use></svg>
+                                                                            </a>
+                                </li>
+                                                            <li>
+                                    <a class="c-nav_link -large c-heading -h5" href="https://www1.procontact.ca/ServiceCall/Login.aspx" rel="noopener" target="_blank">
+                                        Accès à mon compte                                                                                    <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#external"></use></svg>
+                                                                            </a>
+                                </li>
+                                                            <li>
+                                    <a class="c-nav_link -large c-heading -h5" href="../contact/index.html">
+                                        Contact                                                                            </a>
+                                </li>
+                                                    </ul>
+                                                        </div>
+                                <div class="o-layout_item u-4/10@from-small">
+                    <div class="c-nav_info">
+                        <p>
+                            Sans frais                            <br>
+                            <a href="tel:+18882511622">1-888-251-1622</a>
+                        </p>
+                    </div>
+                                            <div class="c-nav_info">
+                            <p>
+                                ITI Québec                                <br>
+                                <a href="tel:+14188711622">1-418-871-1622</a>
+                            </p>
+                        </div>
+                                            <div class="c-nav_info">
+                            <p>
+                                ITI Montréal                                <br>
+                                <a href="tel:+15149401662">1-514-940-1662</a>
+                            </p>
+                        </div>
+                                            <div class="c-nav_info">
+                            <p>
+                                ITI Toronto, Kingston et Ottawa                                <br>
+                                <a href="tel:+18665496558">1-866-549-6558</a>
+                            </p>
+                        </div>
+                                    </div>
+                                <div class="o-layout_item u-4/10@from-small u-none@to-small"></div>
+                <div class="o-layout_item u-4/10@from-small">
+                    <div class="c-social || c-nav_social">
+                                                    <a class="c-social_link -blue || c-nav_social_link" href="https://www.linkedin.com/company/intelligenceiti" rel="nooopener" target="_blank" aria-label="LinkedIn">
+                                <svg aria-hidden="true" focusable="false">
+                                    <use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-linkedin"></use>
+                                </svg>
+                            </a>
+                                                    <a class="c-social_link -blue || c-nav_social_link" href="https://facebook.com/intelligenceITI" rel="nooopener" target="_blank" aria-label="Facebook">
+                                <svg aria-hidden="true" focusable="false">
+                                    <use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-facebook"></use>
+                                </svg>
+                            </a>
+                                                    <a class="c-social_link -blue || c-nav_social_link" href="https://www.youtube.com/channel/UC4eVFxF_vWoitpJ2H-27sAA" rel="nooopener" target="_blank" aria-label="YouTube">
+                                <svg aria-hidden="true" focusable="false">
+                                    <use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-youtube"></use>
+                                </svg>
+                            </a>
+                                            </div>
+                </div>
+                <div class="o-layout_item u-4/10@from-small">
+                                                                                            <a class="c-nav_link -small" href="../legal/index.html">Conditions d&rsquo;utilisation</a>
+                                                                                </div>
+            </div>
+        </div>
+        <div class="c-nav_icon">
+            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#shape-diagonal"></use></svg>
+        </div>
+        <div class="c-nav_contact" data-nav="getInTouch">
+            <div class="c-nav_contact_wrap" >
+                <button class="c-nav_contact_button c-button -blue -full" type="button">
+                    <span></span>
+                    <span class="c-nav_contact_icon">
+                        <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#talk"></use></svg>
+                    </span>
+                    <span class="c-nav_contact_label">
+                        <span>Parlons-nous</span>
+                        <span class="c-button_icon">
+                            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+            <aside class="c-getInTouch" data-module-get-in-touch>
+    <div class="c-getInTouch_bg" data-get-in-touch="close"></div>
+    <div class="c-getInTouch_container">
+        <header class="c-getInTouch_header">
+            <button class="c-button -blue -large -icon -rounded -circleIcon -close" data-get-in-touch="close" aria-label="Fermer">
+                <span class="c-button_icon">
+                    <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#close"></use></svg>
+                </span>
+            </button>
+        </header>
+        <div class="c-getInTouch_main">
+            <p class="c-getInTouch_subtitle">Parlons-nous <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#talk"></use></svg></p>
+            <h3 class="c-heading c-getInTouch_title">Comprendre, conseiller, concrétiser. Voilà la force de nos experts TI, prêts à créer votre solution sur mesure!</h3>
+            <a class="c-button -blue" href="../contact/index.html#form">
+                <span class="c-button_label">Échangeons</span>
+                <span class="c-button_icon">
+                    <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+                </span>
+            </a>
+        </div>
+                <footer class="c-getInTouch_footer">
+            <p class="c-getInTouch_footer_text">
+                Sans frais                <br>
+                <a href="tel:+18882511622">1-888-251-1622</a>
+            </p>
+                            <p class="c-getInTouch_footer_text">
+                    ITI Québec                    <br>
+                    <a href="tel:+14188711622">1-418-871-1622</a>
+                </p>
+                            <p class="c-getInTouch_footer_text">
+                    ITI Montréal                    <br>
+                    <a href="tel:+15149401662">1-514-940-1662</a>
+                </p>
+                            <p class="c-getInTouch_footer_text">
+                    ITI Toronto, Kingston et Ottawa                    <br>
+                    <a href="tel:+18665496558">1-866-549-6558</a>
+                </p>
+                    </footer>
+            </div>
+</aside>
+
+            
+            <div data-module-scroll="main" data-module-tooltip>
+                
+                <main>
+
+    
+        
+            <div class="c-section -heading -marginBottomSmall" data-scroll-section>
+                <div class="o-container">
+                    <header class="c-section_header -margin">
+                        <div class="o-layout -gutter -flex -bottom -column@to-medium">
+                            <div class="o-layout_item u-3/10@from-medium">
+                                                            </div>
+                            <div class="o-layout_item u-7/10@from-small">
+                                <h1 class="c-heading -h2 -noMargin u-anim -delay2">L'approche ITI pour une migration cloud réussie</h1>
+                            </div>
+                        </div>
+                    </header>
+
+                    <section class="o-layout -gutter -flex -columnReverse@to-medium">
+                        <div class="o-layout_item u-3/10@from-medium">
+                                                    </div>
+                        <div class="o-layout_item u-7/10@from-medium">
+                            <div class="u-relative">
+                                <div class="c-section_button -with-img">
+                                    <div></div>
+                                    <span class="c-shape -plus">
+                                        <div data-scroll data-scroll-speed="2">
+                                            <div class="u-anim -delay5">
+                                                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#shape-plus"></use></svg>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </div>
+                                                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <section id="main">
+                <section class="c-section -marginBottomMedium" data-scroll-section>
+    <div class="o-container">
+                    <div class="o-layout -gutter">
+                <div class="o-layout_item u-3/10@from-medium"></div>
+                <div class="o-layout_item u-6/10@from-medium">
+                    <div class="c-section_wrap">
+                        <div class="s-content">
+                            <p><img loading="lazy" class="alignnone size-medium wp-image-8327" src="../../uploads/2021/12/certifications-iti-microsoft-gold1-300x93.png" alt="certifications-iti-microsoft-gold" width="300" height="93" /></p>
+<p>Basée sur le <em>Framework d’adoption du cloud de Microsoft</em>, ITI privilégie une approche consultative et collaborative qui permet à votre organisation de planifier et d’exécuter votre migration et de vous assurer que vous bénéficiez des meilleures pratiques infonuagiques.</p>
+<p>Nous vous promettons un accompagnement humain, du début à la fin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+</section>
+<section class="c-section -marginBottomMedium" data-scroll-section>
+    <div class="o-container">
+                    <div class="c-content-image -reversed">
+                <div class="c-content-image_col -content">
+                    <div class="s-content">
+                        <h2>Analyse et stratégie</h2>
+<p>Pour initier le projet du bon pied, nous nous concentrons sur ce que vous souhaitez-accomplir en passant à l’infonuagique. Quelle est votre vision du cloud et à quelles retombées vous attendez-vous? Souhaitez-vous gagner en agilité, renforcer votre posture de sécurité?</p>
+                    </div>
+                </div>
+                <div class="c-content-image_col -image">
+                    <figure class="c-figure">
+                        <div class="o-ratio u-5:3">
+                            <div class="o-ratio_content">
+                                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-load-src="https://iti.ca/uploads/2022/01/ITI_MigrationCloud_Images_820x770_1.jpg" alt="analyse et stratégie">
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+                </div>
+</section>
+<section class="c-section -marginBottomSmall" data-scroll-section>
+    <div class="o-container">
+        <div class="c-accordion" data-module-accordion>
+                            <span>Analyse et stratégie avec l'approche ITI</span>
+                                    <div class="c-accordion_wrap">
+                                    <section class="c-accordion_item" data-accordion="section">
+                                                                                    <header class="c-accordion_header" data-accordion="header">
+                                                                <div class="c-heading -h6 -noMargin">Inventaire des actifs TI et évaluation des besoins d’affaires</div>
+                                    <div class="c-accordion_plus"></div>
+                                </header>
+                                                <div class="c-accordion_main">
+                            <div class="c-accordion_main_wrap">
+                                                                    <div class="c-accordion_content -full s-content">
+                                        <p>Nous faisons l’inventaire de vos actifs TI et des charges actuelles pour évaluer vos besoins cloud de façon stratégique. Nous tenons compte de la taille de votre organisation, des connaissances de vos équipes et de vos visées d’affaires.</p>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </section>
+                                    <section class="c-accordion_item" data-accordion="section">
+                                                                                    <header class="c-accordion_header" data-accordion="header">
+                                                                <div class="c-heading -h6 -noMargin">Modernisation des environnements de travail</div>
+                                    <div class="c-accordion_plus"></div>
+                                </header>
+                                                <div class="c-accordion_main">
+                            <div class="c-accordion_main_wrap">
+                                                                    <div class="c-accordion_content -full s-content">
+                                        <p>Nous passons en revue votre environnement de travail actuel dans l’objectif de moderniser vos pratiques. Si vous utilisez déjà Microsoft 365, nous simplifions et optimisons votre écosystème. Nous nous assurons que vous profitez des applications et des outils collaboratifs dont vos équipes ont besoin. Nous révisons vos licences afin d’optimiser leurs coûts et de maximiser leur utilisation. Nous pouvons même accélérer et faciliter leur déploiement grâce à des outils d’automatisation tels qu’Intune et Autopilot.</p>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </section>
+                                    <section class="c-accordion_item" data-accordion="section">
+                                                                                    <header class="c-accordion_header" data-accordion="header">
+                                                                <div class="c-heading -h6 -noMargin">Évaluation de la posture de sécurité</div>
+                                    <div class="c-accordion_plus"></div>
+                                </header>
+                                                <div class="c-accordion_main">
+                            <div class="c-accordion_main_wrap">
+                                                                    <div class="c-accordion_content -full s-content">
+                                        <p>Nous analysons la sécurité des applications Microsoft 365 que vous utilisez et de votre Tenant. Ce dernier représente la fondation sur laquelle la gestion de vos données, de vos utilisateurs et de vos outils Microsoft repose. Il est primordial de l’analyser et de bien le comprendre afin de préparer votre environnement cloud. Nous considérons également la structure de vos ressources, vos politiques de sécurité et vos règles de gouvernance afin d’émettre des recommandations qui renforceront votre posture.</p>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </section>
+                                    <section class="c-accordion_item" data-accordion="section">
+                                                                                    <header class="c-accordion_header" data-accordion="header">
+                                                                <div class="c-heading -h6 -noMargin">Recommandations stratégiques d’utilisation de l&#039;infonuagique</div>
+                                    <div class="c-accordion_plus"></div>
+                                </header>
+                                                <div class="c-accordion_main">
+                            <div class="c-accordion_main_wrap">
+                                                                    <div class="c-accordion_content -full s-content">
+                                        <p>Vos serveurs et applications sont évalués et analysés. Nous nous assurons qu’il sera possible de les migrer dans l’infonuagique, c’est-à-dire que les systèmes d’exploitation et/ou applications sont compatibles. L’ordre de migration est établi en fonction, par exemple, de l’interdépendance avec des systèmes sur site.</p>
+<p>Nous vous ferons également des recommandations sur des modernisations qui peuvent être réalisées facilement (quick fix) ou que nous vous suggérons de planifier dans une phase subséquente, soit lors des optimisations après la migration.</p>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </section>
+                                    <section class="c-accordion_item" data-accordion="section">
+                                                                                    <header class="c-accordion_header" data-accordion="header">
+                                                                <div class="c-heading -h6 -noMargin">Planification de la zone d’accueil personnalisée</div>
+                                    <div class="c-accordion_plus"></div>
+                                </header>
+                                                <div class="c-accordion_main">
+                            <div class="c-accordion_main_wrap">
+                                                                    <div class="c-accordion_content -full s-content">
+                                        <p>Puisqu’elle est la fondation de vos ressources cloud et de leur gestion, nous vous présentons l’architecture d’une zone d’accueil qui répondra à vos besoins actuels et avec laquelle vous pourrez évoluer rapidement par la suite. Celle-ci facilite votre migration, réduit les risques, et permet de construire la sécurité, la gouvernance et la conformité à votre rythme.</p>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </section>
+                            </div>
+                    </div>
+    </div>
+</section>
+<section class="c-section -marginBottomMedium" data-scroll-section>
+    <div class="o-container">
+                    <div class="c-content-image">
+                <div class="c-content-image_col -content">
+                    <div class="s-content">
+                        <h2>Transformation et migration</h2>
+<p>À cette étape, le plan stratégique est mis à exécution avec l’accompagnement des experts ITI. C’est ici qu’être bien accompagné prend tout son sens.</p>
+<p>En plus de vous assister dans la création ou la migration de vos services vers l’infonuagique, nous vous conseillons pour en simplifier la gestion et diminuer les coûts. Nous voyons aussi à augmenter la robustesse de vos nouvelles solutions. Certaines recommandations pourront vous être suggérées dans des phases subséquentes, par exemple pour utiliser des services cloud natifs ou moderniser vos applications.</p>
+<p>Nos experts s’assurent d’effectuer un transfert de connaissances afin que vos équipes deviennent autonomes le plus rapidement possible.</p>
+<p>&nbsp;</p>
+                    </div>
+                </div>
+                <div class="c-content-image_col -image">
+                    <figure class="c-figure">
+                        <div class="o-ratio u-5:3">
+                            <div class="o-ratio_content">
+                                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-load-src="https://iti.ca/uploads/2022/01/ITI_MigrationCloud_Images_820x770_2.jpg" alt="transformation et migration">
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+                </div>
+</section>
+<section class="c-section -marginBottomSmall" data-scroll-section>
+    <div class="o-container">
+        <div class="c-accordion" data-module-accordion>
+                            <span>Transformation et migration avec l'approche ITI</span>
+                                    <div class="c-accordion_wrap">
+                                    <section class="c-accordion_item" data-accordion="section">
+                                                                                    <header class="c-accordion_header" data-accordion="header">
+                                                                <div class="c-heading -h6 -noMargin">Création des services infonuagiques</div>
+                                    <div class="c-accordion_plus"></div>
+                                </header>
+                                                <div class="c-accordion_main">
+                            <div class="c-accordion_main_wrap">
+                                                                    <div class="c-accordion_content -full s-content">
+                                        <p>La zone d’accueil est préparée, les accès nécessaires pour vos usagers sont créés, les pares-feux et Active Directory sont configurés pour mettre l’environnement cloud en production.</p>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </section>
+                                    <section class="c-accordion_item" data-accordion="section">
+                                                                                    <header class="c-accordion_header" data-accordion="header">
+                                                                <div class="c-heading -h6 -noMargin">Modernisation des applications</div>
+                                    <div class="c-accordion_plus"></div>
+                                </header>
+                                                <div class="c-accordion_main">
+                            <div class="c-accordion_main_wrap">
+                                                                    <div class="c-accordion_content -full s-content">
+                                        <p>S’il s’avère avantageux et relativement facile de le faire, des applications sont migrées vers le cloud. Certaines pourront être modernisées par une version offerte en tant que service tandis que d’autres pourront l’être dans une phase subséquente de la migration.</p>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </section>
+                                    <section class="c-accordion_item" data-accordion="section">
+                                                                                    <header class="c-accordion_header" data-accordion="header">
+                                                                <div class="c-heading -h6 -noMargin">Accompagnement et formation</div>
+                                    <div class="c-accordion_plus"></div>
+                                </header>
+                                                <div class="c-accordion_main">
+                            <div class="c-accordion_main_wrap">
+                                                                    <div class="c-accordion_content -full s-content">
+                                        <p>Nos experts accompagnent et forment vos équipes pour vous permettre de vous approprier votre environnement infonuagique.</p>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </section>
+                            </div>
+                    </div>
+    </div>
+</section>
+<section class="c-section -marginBottomMedium" data-scroll-section>
+    <div class="o-container">
+                    <div class="c-content-image -reversed">
+                <div class="c-content-image_col -content">
+                    <div class="s-content">
+                        <h2>Optimisations et gouvernance</h2>
+<p>À ce stade-ci, des recommandations qui n’avaient pas été traitées en priorité peuvent être mises de l’avant, par exemple en modernisant vos machines virtuelles dans le cloud vers un modèle Platform as a Service (PaaS). Le tout est fait en continu, ainsi qu’à un rythme vous permettant à la fois d’adopter et d’assimiler de nouvelles technologies. Ce cycle compréhensif vous permet d’arrimer vos besoins et objectifs d’affaires à des solutions infonuagiques personnalisées.</p>
+                    </div>
+                </div>
+                <div class="c-content-image_col -image">
+                    <figure class="c-figure">
+                        <div class="o-ratio u-5:3">
+                            <div class="o-ratio_content">
+                                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-load-src="https://iti.ca/uploads/2022/01/ITI_MigrationCloud_Images_820x770_3.jpg" alt="optimisation et gouvernance">
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+                </div>
+</section>
+<section class="c-section -marginBottomSmall" data-scroll-section>
+    <div class="o-container">
+        <div class="c-accordion" data-module-accordion>
+                            <span>Optimisations et gouvernance avec l'approche ITI</span>
+                                    <div class="c-accordion_wrap">
+                                    <section class="c-accordion_item" data-accordion="section">
+                                                                                    <header class="c-accordion_header" data-accordion="header">
+                                                                <div class="c-heading -h6 -noMargin">Optimisation des coûts</div>
+                                    <div class="c-accordion_plus"></div>
+                                </header>
+                                                <div class="c-accordion_main">
+                            <div class="c-accordion_main_wrap">
+                                                                    <div class="c-accordion_content -full s-content">
+                                        <p>Malgré la planification en amont, il est toujours possible d’optimiser les coûts liés à votre cloud en ajustant les ressources allouées selon votre utilisation réelle. Par exemple, des instances réservées ou des abonnements activés pourraient être revus s’ils ne sont pas utilisés à pleine capacité.</p>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </section>
+                                    <section class="c-accordion_item" data-accordion="section">
+                                                                                    <header class="c-accordion_header" data-accordion="header">
+                                                                <div class="c-heading -h6 -noMargin">Ajustement de la posture de sécurité</div>
+                                    <div class="c-accordion_plus"></div>
+                                </header>
+                                                <div class="c-accordion_main">
+                            <div class="c-accordion_main_wrap">
+                                                                    <div class="c-accordion_content -full s-content">
+                                        <p>En observant de façon proactive l’intégrité de vos réseaux, de vos environnements et de vos données, nos experts peuvent recommander et déployer des technologies au fur et à mesure. Vous obtenez ainsi une protection supérieure face aux menaces en constante évolution, sans restreindre vos accès ou nuire à vos opérations.</p>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </section>
+                                    <section class="c-accordion_item" data-accordion="section">
+                                                                                    <header class="c-accordion_header" data-accordion="header">
+                                                                <div class="c-heading -h6 -noMargin">Optimisation des performances</div>
+                                    <div class="c-accordion_plus"></div>
+                                </header>
+                                                <div class="c-accordion_main">
+                            <div class="c-accordion_main_wrap">
+                                                                    <div class="c-accordion_content -full s-content">
+                                        <p>En fonction de l’utilisation et des charges de travail, nous émettons des recommandations vous permettant d’accroître les performances de votre cloud, d’optimiser les ressources et de rehausser l’expérience usager.</p>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </section>
+                            </div>
+                    </div>
+    </div>
+</section>
+<section class="c-section -marginBottomMedium" data-scroll-section>
+    <div class="o-container">
+                    <div class="o-layout -gutter">
+                <div class="o-layout_item u-3/10@from-medium"></div>
+                <div class="o-layout_item u-6/10@from-medium">
+                    <div class="c-section_wrap">
+                        <div class="s-content">
+                            <h2>On déploie le cloud les 2 pieds sur terre</h2>
+<p>Votre organisation bénéficie déjà d’applications en mode SaaS comme la solution Teams de Microsoft 365, mais vous songez également à migrer vos données et ressources vers l’infonuagique ? Nos experts sont là pour vous accompagner et établir une feuille de route en fonction de vos objectifs d’affaires, des capacités de votre personnel TI et de l’étape à laquelle vous êtes rendus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+</section>
+<section class="c-section -marginBottomMedium" data-scroll-section>
+    <div class="o-container">
+        <div class="o-layout -gutter">
+            <div class="o-layout_item u-3/10@from-medium"></div>
+            <div class="o-layout_item u-6/10@from-medium">
+                <div class="c-section_wrap -paddingLeft@to-medium">
+                    <div class="o-layout -gutterTiny">
+                                                <div class="o-layout_item -auto u-anim -delay5" data-gtm="target" data-gtm-data='{"eventCategory":"","eventAction":"Lien bouton","eventLabel":"Débuter votre projet infonuagique"}'>
+                            <a class="c-button -white" href="../contact/index.html" target="_blank">
+                                <span class="c-button_label">Débuter votre projet infonuagique</span>
+                                <span class="c-button_icon">
+                                    <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+                                </span>
+                            </a>
+                        </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            </section>
+
+            
+        
+    
+</main>
+
+                <footer class="c-footer" data-scroll-section>
+    <div class="o-container" data-scroll data-scroll-repeat data-scroll-call="toggleVisibility, StickyNav">
+        <div class="o-layout -flex -reverse@to-small">
+            <div class="o-layout_item u-3/10@from-small">
+                                    <div class="c-footer_newsletter">
+                        <p class="c-section_category">Infolettre ITI</p>
+                        <label for="c-form-newsletter-footer-email">
+                            <span class="c-heading -h4 u-block">Soyez les premiers informés.</span>
+                        </label>
+                        <form id="c-form-newsletter-footer" class="c-footer_form" action="https://app.cyberimpact.com/optin" method="POST" target="_blank" accept-charset="utf-8" data-gtm="form" data-gtm-data="{&quot;eventCategory&quot;:&quot;Lead&quot;,&quot;eventAction&quot;:&quot;Infolettre&quot;,&quot;eventLabel&quot;:&quot;Footer&quot;}">
+    <div class="c-form_inputWrap">
+        <label for="c-form-newsletter-footer-email" class="u-screen-reader-text">Adresse courriel</label>
+        <input type="email" id="c-form-newsletter-footer-email" name="ci_email" class="c-form_input" placeholder="Votre adresse courriel" required />
+        <div style="display:block; visibility:hidden; height:1px;">
+            <input style="display:none;" type="text" name="ci_verification" />
+            <input type="hidden" name="ci_groups" value="50" />
+            <input type="hidden" name="ci_account" value="d2b6905b-d634-465a-051f-d450e2b14785" />
+            <input type="hidden" name="ci_language" value="fr_ca" />
+            <input type="hidden" name="ci_sent_url" value="" />
+            <input type="hidden" name="ci_error_url" value="" />
+            <input type="hidden" name="ci_confirm_url" value="" />
+        </div>
+        <button class="c-form_inputButton c-button -transparent -icon" type="submit" aria-label="Envoyer">
+            <span class="c-button_icon">
+                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+            </span>
+        </button>
+    </div>
+</form>
+                    </div>
+                            </div>
+            <div class="o-layout_item u-1/10@from-small"></div>
+            <div class="o-layout_item u-6/10@from-small">
+                <nav class="c-footer_nav">
+                                                                <ul class="c-footer_nav_list">
+                                                            <li class="c-footer_nav_item">
+                                    <a class="c-footer_nav_link" href="../solutions-ti/index.html">Solutions TI</a>
+                                </li>
+                                                            <li class="c-footer_nav_item">
+                                    <a class="c-footer_nav_link" href="../solutions-humaines/index.html">Solutions humaines</a>
+                                </li>
+                                                            <li class="c-footer_nav_item">
+                                    <a class="c-footer_nav_link" href="../blogue/index.html">Blogue</a>
+                                </li>
+                                                            <li class="c-footer_nav_item">
+                                    <a class="c-footer_nav_link" href="../a-propos/index.html">À propos</a>
+                                </li>
+                                                            <li class="c-footer_nav_item">
+                                    <a class="c-footer_nav_link" href="../travailler-chez-iti/index.html">Travailler chez ITI</a>
+                                </li>
+                                                            <li class="c-footer_nav_item">
+                                    <a class="c-footer_nav_link" href="../placement-de-ressources/index.html">Placement de ressources</a>
+                                </li>
+                                                    </ul>
+                                                                                                                                        <a data-load="false" class="c-footer_nav_link -lang" href="../../en/itis-approach-for-successful-cloud-migration/index.html">English</a>
+                                                            </nav>
+                <div class="o-layout -gutterSmall">
+                    <div class="o-layout_item u-2/3@from-small">
+                        <div class="c-footer_title">Autres liens</div>
+                                                                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="https://www.ecsrv.com/PrivateClientLogin.aspx?No=620276" rel="noopener" target="_blank">
+                                    Catalogue en ligne                                                                            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#external"></use></svg>
+                                                                    </a>
+                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="https://www1.procontact.ca/ServiceCall/Login.aspx" rel="noopener" target="_blank">
+                                    Accès à mon compte                                                                            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#external"></use></svg>
+                                                                    </a>
+                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="../contact/index.html">
+                                    Contact                                                                    </a>
+                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="../legal/index.html">
+                                    Conditions d’utilisation                                                                    </a>
+                                                                                                </div>
+                    <div class="o-layout_item u-1/3@from-small">
+                                                                            <div class="c-footer_title">Industries <sup>05</sup></div>
+                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="../industries/moyennes-entreprises/index.html">Moyennes entreprises</a>
+                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="../industries/corporatif/index.html">Grandes entreprises</a>
+                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="../industries/education/index.html">Éducation</a>
+                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="../industries/gouvernement/index.html">Gouvernement</a>
+                                                            <a class="c-footer_link c-heading -h6 -noMargin" href="../industries/sante/index.html">Santé</a>
+                                                                                                </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-footer_bottom">
+            <div class="o-layout">
+                <div class="o-layout_item u-3/10@from-small">
+                    <div class="c-footer_social c-social">
+                                                    <a class="c-social_link -white -small" href="https://www.linkedin.com/company/intelligenceiti" rel="nooopener" target="_blank" aria-label="LinkedIn" data-gtm="target" data-gtm-data='{"eventCategory":"Medias sociaux","eventAction":"Clic","eventLabel":"linkedin"}'>
+                                <svg aria-hidden="true" focusable="false">
+                                    <use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-linkedin"></use>
+                                </svg>
+                            </a>
+                                                    <a class="c-social_link -white -small" href="https://facebook.com/intelligenceITI" rel="nooopener" target="_blank" aria-label="Facebook" data-gtm="target" data-gtm-data='{"eventCategory":"Medias sociaux","eventAction":"Clic","eventLabel":"facebook"}'>
+                                <svg aria-hidden="true" focusable="false">
+                                    <use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-facebook"></use>
+                                </svg>
+                            </a>
+                                                    <a class="c-social_link -white -small" href="https://www.youtube.com/channel/UC4eVFxF_vWoitpJ2H-27sAA" rel="nooopener" target="_blank" aria-label="YouTube" data-gtm="target" data-gtm-data='{"eventCategory":"Medias sociaux","eventAction":"Clic","eventLabel":"youtube"}'>
+                                <svg aria-hidden="true" focusable="false">
+                                    <use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#social-youtube"></use>
+                                </svg>
+                            </a>
+                                            </div>
+                </div>
+                <div class="o-layout_item u-1/10@from-small"></div>
+                <div class="o-layout_item u-6/10@from-small">
+                    <div class="o-layout -gutterSmall -gutterBottom">
+                        <div class="o-layout_item u-1/2@from-tiny">
+                            <p>
+                                Sans frais                                <br>
+                                <a class="o-link -white" href="tel:+18882511622">1-888-251-1622</a>
+                            </p>
+                        </div>
+                                                    <div class="o-layout_item u-1/2@from-tiny">
+                                <p>
+                                    ITI Québec                                    <br>
+                                    <a class="o-link -white" href="tel:+14188711622">1-418-871-1622</a>
+                                </p>
+                            </div>
+                                                    <div class="o-layout_item u-1/2@from-tiny">
+                                <p>
+                                    ITI Montréal                                    <br>
+                                    <a class="o-link -white" href="tel:+15149401662">1-514-940-1662</a>
+                                </p>
+                            </div>
+                                                    <div class="o-layout_item u-1/2@from-tiny">
+                                <p>
+                                    ITI Toronto, Kingston et Ottawa                                    <br>
+                                    <a class="o-link -white" href="tel:+18665496558">1-866-549-6558</a>
+                                </p>
+                            </div>
+                                            </div>
+                                    </div>
+            </div>
+            <div class="c-footer_copy">
+                <p>2022 © ITI</p>
+                <p>Site Web par <a class="c-footer_copy_link" href="https://locomotive.ca" target="_blank" rel="nooopener">Locomotive Inc.</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="u-overflow" id="backtop">
+        <div class="c-footer_backtop" data-scroll data-scroll-speed="-3" data-scroll-position="bottom" data-scroll-target="#backtop">
+            <div class="c-footer_backtop_bg" data-load-style="background-image: url('https://iti.ca/themes/iti/assets/images/static/backtop.jpg')"></div>
+            <button class="c-footer_backtop_icon" data-module-scrollto data-scrollto-href="top" data-scroll data-scroll-speed="1.5" data-scroll-position="bottom" data-scroll-target="#backtop" aria-label="Retourner au haut de la page.">
+                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-up"></use></svg>
+            </button>
+        </div>
+    </div>
+</footer>
+
+                            </div>
+
+                    </div>
+
+        <section id="c-newsletterModal" class="c-newsletterModal -has-image c-modal -scrollable" aria-labelledby="c-newsletterModal-label" data-module-modal="newsletter" data-modal-once style="opacity:0;">
+    <div class="c-modal_bg" data-modal="dismiss"></div>
+
+    <div class="c-modal_outer">
+        <button class="c-button -blue -large -icon -rounded -circleIcon -close c-modal_close" data-modal="dismiss" aria-label="Fermer">
+            <span class="c-button_icon">
+                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#close"></use></svg>
+            </span>
+        </button>
+        <div class="c-modal_inner" data-modal="body">
+                            <img src="../../uploads/2022/04/pop-up-infolettre.jpg" alt="pop up infolettre">
+                        <div class="c-modal_content">
+                                    <h3 class="c-heading -h4 u-block">Infolettre ITI</h3>
+                                                    <p class="c-heading -medium">Comprendre. Conseiller. Concrétiser.</p>
+                                                    <p>Retrouvez l’actualité TI démocratisée par des experts passionnés. Des points de vue sur des enjeux touchant votre contexte d’affaires. Des invitations exclusives aux événements et webinaires.  </p>
+                                <form id="c-form-newsletter-modal" class="c-modal_form" action="https://app.cyberimpact.com/optin" method="POST" target="_blank" accept-charset="utf-8" data-gtm="form" data-gtm-data="{&quot;eventCategory&quot;:&quot;Lead&quot;,&quot;eventAction&quot;:&quot;Infolettre&quot;,&quot;eventLabel&quot;:&quot;Modal&quot;}">
+    <div class="c-form_inputWrap">
+        <label for="c-form-newsletter-modal-email" class="u-screen-reader-text">Adresse courriel</label>
+        <input type="email" id="c-form-newsletter-modal-email" name="ci_email" class="c-form_input -gray" placeholder="Votre adresse courriel" required />
+        <div style="display:block; visibility:hidden; height:1px;">
+            <input style="display:none;" type="text" name="ci_verification" />
+            <input type="hidden" name="ci_groups" value="50" />
+            <input type="hidden" name="ci_account" value="d2b6905b-d634-465a-051f-d450e2b14785" />
+            <input type="hidden" name="ci_language" value="fr_ca" />
+            <input type="hidden" name="ci_sent_url" value="" />
+            <input type="hidden" name="ci_error_url" value="" />
+            <input type="hidden" name="ci_confirm_url" value="" />
+        </div>
+        <button class="c-form_inputButton c-button -transparent -icon" type="submit" aria-label="Envoyer">
+            <span class="c-button_icon">
+                <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#arrow-right"></use></svg>
+            </span>
+        </button>
+    </div>
+</form>
+                                    <small>Nous ne partagerons jamais vos informations et vous pourrez toujours vous désabonner en un simple clic.</small>
+                            </div>
+        </div>
+    </div>
+</section>
+        <section id="c-embedModal" class="c-modal c-videoModal" data-module-embed-modal="embed" style="opacity:0;">
+    <div class="c-modal_bg" data-embed-modal="dismiss"></div>
+
+    <button class="c-button -blue -large -icon -rounded -circleIcon -close c-modal_close" data-embed-modal="dismiss" aria-label="Fermer">
+        <span class="c-button_icon">
+            <svg aria-hidden="true" focusable="false"><use xlink:href="https://iti.ca/themes/iti/assets/images/sprite.svg?ver=202206271314#close"></use></svg>
+        </span>
+    </button>
+
+    <div class="c-modal_outer">
+        <div class="c-modal_inner" data-embed-modal="body"></div>
+    </div>
+</section>
+
+                
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js" id="iti-babel-polyfill-js" crossorigin="anonymous" nomodule></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CElement.prototype.append%2CNodeList.prototype.forEach%2CCustomEvent%2Csmoothscroll%2Cfetch%2CCustomEvent%2CElement.prototype.matches%2CNodeList.prototype.forEach%2CAbortController%2Cconsole.warn%2CElement.prototype.remove" id="iti-ecma-polyfill-js" crossorigin="anonymous" nomodule></script>
+<script src="../../themes/iti/assets/scripts/vendors.js%3Fver=202206271314" id="iti-theme-vendors-js" defer></script>
+<script type='text/javascript' id='iti-theme-app-js-extra'>
+/* <![CDATA[ */
+var itiData = {"ajax_url":"https:\/\/iti.ca\/wp-ajax.php","theme_url":"https:\/\/iti.ca\/themes\/iti","l10n":{"fileExceedsLimit":"Le fichier d\u00e9passe la limite de taille","illegalFileExtension":"Ce type de fichier n\u2019est pas autoris\u00e9.","invalidFileExtension":"Ce type de fichier n\u2019est pas autoris\u00e9. Doit \u00eatre l\u2019un des types suivants : ","loading":"Chargement\u2026","maxFilesReached":"Nombre maximal de fichiers atteints","errorTryAgain":"Une erreur est survenue. Veuillez essayer \u00e0 nouveau.","errorTryLater":"Une erreur est survenue. Veuillez essayer \u00e0 nouveau plus tard.","unknownError":"Une erreur s\u2019est produite."}};
+/* ]]> */
+</script>
+<script src="../../themes/iti/assets/scripts/app.js%3Fver=202206271314" id="iti-theme-app-js" defer></script>
+    </body>
+</html>
